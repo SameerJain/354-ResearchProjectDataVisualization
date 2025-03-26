@@ -1,29 +1,20 @@
 import dash
 import dash_bootstrap_components as dbc
 from dash import dcc, html, Input, Output
-
 import numpy as np
-
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 # Load and prepare data
 excel_file = pd.ExcelFile('data/democracy_trade_analysis.xlsx')
-df = pd.concat([pd.read_excel(excel_file, sheet_name=sheet)
-                for sheet in excel_file.sheet_names], ignore_index=True)
+df = pd.concat([pd.read_excel(excel_file, sheet_name=sheet) for sheet in excel_file.sheet_names], ignore_index=True)
 # Get unique countries and categories
 countries = sorted(df['country_name'].dropna().unique())
 categories = sorted(df['Category'].dropna().unique())
 
 # Create dropdown options with category averages at top
-dropdown_options = [
-                       {'label': f'[Average] {category}', 'value': f'avg_{category}'}
-                       for category in categories
-                   ] + [
-                       {'label': country, 'value': country}
-                       for country in countries
-                   ]
+dropdown_options = [{'label': f'[Average] {category}', 'value': f'avg_{category}'} for category in categories] + [{'label': country, 'value': country}for country in countries]
 
 # Initialize the Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
@@ -31,16 +22,14 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
 # App layout
 app.layout = dbc.Container([
     html.Div(style={'backgroundColor': '#0a192f', 'padding': '20px', 'minHeight': '100vh'}, children=[
-        html.H1("Democracy vs. Trade Openness Research - PSC354 Group 9",
-                className="text-center my-4",
-                style={'color': '#64ffda', 'fontFamily': 'Helvetica, Arial, sans-serif', 'letterSpacing': '1px'}),
+        html.H1("Democracy vs. Trade Openness Research - PSC354 Group 9",className="text-center my-4",
+        style={'color': '#64ffda', 'fontFamily': 'Helvetica, Arial, sans-serif', 'letterSpacing': '1px'}),
 
         dbc.Row([
             dbc.Col([
                 dbc.Card([
                     dbc.CardBody([
-                        html.Div(style={'backgroundColor': '#172a45', 'padding': '15px', 'borderRadius': '5px'},
-                                 children=[
+                        html.Div(style={'backgroundColor': '#172a45', 'padding': '15px', 'borderRadius': '5px'},children=[
                                      html.H4("Select Country"),
                                      dcc.Dropdown(
                                          id='country-dropdown',
@@ -82,9 +71,7 @@ app.layout = dbc.Container([
                 dbc.Card([
                     dbc.CardBody([
                         html.Div(style={'backgroundColor': '#172a45', 'padding': '15px', 'borderRadius': '5px'},
-                                 children=[
-                                     dcc.Graph(id='correlation-scatter')
-                                 ])
+                                 children=[dcc.Graph(id='correlation-scatter')])
                     ])
                 ])
             ], width=12)
