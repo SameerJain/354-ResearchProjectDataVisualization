@@ -1,0 +1,181 @@
+Correlation Coefficients by Category:
+=====================================
+
+Liberal Democracy:
+-----------------
+Belgium: 0.887
+Denmark: 0.850
+Estonia: 0.778
+Finland: 0.772
+United Kingdom: 0.760
+Netherlands: 0.744
+Italy: 0.721
+France: 0.700
+Ireland: 0.699
+Seychelles: 0.689
+Latvia: 0.674
+Austria: 0.633
+Costa Rica: 0.595
+Germany: 0.593
+United States of America: 0.565
+South Korea: 0.480
+Iceland: 0.442
+Switzerland: 0.439
+Spain: 0.418
+Greece: 0.405
+Portugal: 0.384
+Sweden: 0.346
+Australia: 0.317
+Uruguay: 0.292
+Israel: 0.122
+Slovenia: -0.071
+New Zealand: -0.161
+Trinidad and Tobago: -0.407
+Japan: -0.425
+Barbados: -0.462
+Luxembourg: -0.548
+Norway: -0.636
+Botswana: -0.691
+Cyprus: -0.730
+
+Electoral Democracy:
+-------------------
+Albania: 0.920
+Georgia: 0.883
+Mauritius: 0.795
+Ghana: 0.775
+Peru: 0.771
+Mongolia: 0.770
+Mexico: 0.766
+Burkina Faso: 0.765
+Senegal: 0.764
+Guinea-Bissau: 0.759
+Sao Tome and Principe: 0.713
+El Salvador: 0.702
+Paraguay: 0.702
+Madagascar: 0.685
+Bulgaria: 0.650
+Colombia: 0.628
+South Africa: 0.623
+Panama: 0.598
+Malta: 0.596
+Bhutan: 0.596
+Guatemala: 0.574
+Chile: 0.547
+Slovakia: 0.534
+Brazil: 0.516
+Indonesia: 0.503
+Croatia: 0.482
+Sierra Leone: 0.482
+Dominican Republic: 0.470
+Cape Verde: 0.460
+North Macedonia: 0.411
+Ecuador: 0.402
+Tunisia: 0.372
+Lithuania: 0.363
+Bosnia and Herzegovina: 0.357
+Canada: 0.319
+Nepal: 0.312
+Niger: 0.302
+Argentina: 0.280
+Vanuatu: 0.262
+Poland: 0.249
+Maldives: 0.245
+Jamaica: 0.159
+Solomon Islands: 0.159
+Nigeria: 0.139
+Liberia: 0.095
+Moldova: -0.024
+Suriname: -0.093
+Lesotho: -0.156
+Guyana: -0.160
+Namibia: -0.166
+Malawi: -0.253
+Ukraine: -0.319
+Sri Lanka: -0.340
+Armenia: -0.471
+Czechia: -0.691
+
+Electoral Autocracy:
+-------------------
+Tanzania: 0.875
+Chad: 0.814
+Cambodia: 0.778
+Togo: 0.776
+Equatorial Guinea: 0.766
+Philippines: 0.764
+Guinea: 0.752
+Ethiopia: 0.730
+Singapore: 0.716
+The Gambia: 0.688
+Hungary: 0.682
+Burundi: 0.650
+Comoros: 0.581
+Serbia: 0.579
+Uganda: 0.577
+Bolivia: 0.536
+Mali: 0.518
+Mauritania: 0.511
+Malaysia: 0.510
+Venezuela: 0.503
+Honduras: 0.493
+Angola: 0.465
+Papua New Guinea: 0.432
+Republic of the Congo: 0.403
+Rwanda: 0.302
+Kyrgyzstan: 0.297
+Egypt: 0.289
+Mozambique: 0.281
+Iran: 0.267
+Algeria: 0.236
+Benin: 0.211
+Afghanistan: 0.149
+Central African Republic: 0.143
+Lebanon: 0.139
+Azerbaijan: 0.128
+Cameroon: 0.068
+Bangladesh: 0.064
+Tajikistan: 0.059
+Iraq: 0.033
+Pakistan: 0.006
+Russia: 0.006
+Nicaragua: 0.005
+Burma/Myanmar: 0.003
+India: -0.059
+Montenegro: -0.078
+Türkiye: -0.080
+Zimbabwe: -0.165
+Gabon: -0.187
+Ivory Coast: -0.199
+Haiti: -0.290
+Kenya: -0.453
+Djibouti: -0.468
+Turkmenistan: -0.511
+Vietnam: -0.574
+Kazakhstan: -0.576
+Fiji: -0.674
+Zambia: -0.825
+Belarus: -0.895
+
+Closed Autocracy:
+----------------
+Eritrea: 0.894
+Morocco: 0.830
+Oman: 0.752
+United Arab Emirates: 0.751
+Yemen: 0.713
+Qatar: 0.628
+Thailand: 0.493
+Libya: 0.466
+Jordan: 0.448
+China: 0.378
+Bahrain: 0.353
+Syria: 0.231
+Saudi Arabia: 0.023
+Sudan: -0.051
+Eswatini: -0.124
+Kuwait: -0.149
+Uzbekistan: -0.151
+Laos: -0.222
+Cuba: -0.665
+Hong Kong: -0.728

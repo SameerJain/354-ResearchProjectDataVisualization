@@ -1,19 +1,83 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import os
+import pandas as pd #pandas is an open source library for data manipulation
+import matplotlib.pyplot as plt #for creating the charts
+import os #for adding and naming directories
 
+'''
+1. IMPORT necessary libraries (pandas, matplotlib, os)
+
+2. CREATE directories for plot storage
+   - Main 'plots' directory
+   - 'aggregate' subdirectory for regime-level plots
+   - 'individual' subdirectory for country-level plots
+
+3. LOAD datasets
+   - Load KOF trade globalization data from Excel
+     - Select only relevant columns
+     - Rename columns for consistency
+     - Clean country codes
+     - Filter to years 1970-2020
+   - Load V-Dem democracy data from CSV
+     - Select only relevant columns
+     - Rename columns for consistency
+     - Clean country codes
+     - Filter to years 1970-2020
+   - Find intersection of country codes from both datasets
+
+4. CREATE complete dataset
+   - Generate all country-year combinations (1970-2020)
+   - Merge both datasets with this complete frame
+   - Mark missing data status for each row
+
+5. ADD regime classifications
+   - Create mapping from numeric codes to regime names
+   - Map regime types for each country-year
+   - Handle special country name cases
+   - Find most recent regime for each country
+   - Add category based on most recent regime
+
+6. GENERATE data quality report
+   - For each country:
+     - Calculate data coverage percentages
+     - Identify missing years
+     - Detect continuous gaps in data
+   - Print summary of countries by regime category
+
+7. EXPORT to Excel
+   - Sort data by category, country, and year
+   - Create formatted Excel workbook
+   - Create separate sheets for each regime category
+   - Add formatting (headers, missing data highlighting)
+   - Add separator rows between countries
+   - Adjust column widths
+
+8. CREATE visualizations
+   - Calculate data ranges for consistent scaling
+   - Create individual regime plots
+     - Create dual-axis plots with democracy and trade data
+     - Save to aggregate folder
+   - Create combined 2×2 grid of all regime types
+     - Save to aggregate folder
+   - Create individual country plots
+     - Add time series for democracy and trade
+     - Highlight missing data periods
+     - Add regime type indicators at bottom
+     - Add legends and styling
+     - Save to individual folder
+   - Print completion messages
+'''
 # Create plots directory if it doesn't exist
-os.makedirs('plots', exist_ok=True)
+os.makedirs('plots', exist_ok=True) #bool is for if the folders are already made then return
 os.makedirs('plots/aggregate', exist_ok=True)
 os.makedirs('plots/individual', exist_ok=True)
 
 # ---------------------------
 # STEP 1: Load KOF Excel
 # ---------------------------
-kof = pd.read_excel('data/KOFGI_2024_public.xlsx', usecols=['code', 'year', 'KOFTrGIdf'])
-kof = kof.rename(columns={'code': 'country_code'})
-kof['country_code'] = kof['country_code'].astype(str).str.strip()
-kof = kof[kof['year'].between(1970, 2020)]
+kof = pd.read_excel('data/KOFGI_2024_public.xlsx', usecols=['code', 'year', 'KOFTrGIdf']) #read the excel file and use these columns
+kof = kof.rename(columns={'code': 'country_code'}) #rename to match other file to match later one
+kof['country_code'] = kof['country_code'].astype(str).str.strip() #convert to string for edge cases and strip for any gaps in file
+kof = kof[kof['year'].between(1970, 2020)] #rewrite to just give us the years we want
+#? why some places are we doing kof = and not doing it other places
 
 # ---------------------------
 # STEP 2: Load V-Dem CSV
@@ -24,20 +88,22 @@ vdem['country_code'] = vdem['country_code'].astype(str).str.strip()
 vdem = vdem[vdem['year'].between(1970, 2020)]
 
 # Get all unique country codes from both datasets
-all_codes = set(vdem['country_code'].unique()) & set(kof['country_code'].unique())
+all_codes = set(vdem['country_code'].unique()) & set(kof['country_code'].unique()) #create our list of unique country codes from both lists
 
 # ---------------------------
 # STEP 3: Create complete 1970–2020 year set per country
 # ---------------------------
-full_years = pd.DataFrame([(c, y) for c in all_codes for y in range(1970, 2021)], columns=['country_code', 'year'])
+full_years = pd.DataFrame([(c, y) for c in all_codes for y in range(1970, 2021)], columns=['country_code', 'year']) #for our dataframe we are making cells
 
 # Merge V-Dem and KOF separately
 vdem_clean = vdem[['country_code', 'country_name', 'year', 'v2x_polyarchy', 'v2x_regime']]
 kof_clean = kof[['country_code', 'year', 'KOFTrGIdf']]
+#? why are we doing this
 
 merged = full_years \
 .merge(vdem_clean, on=['country_code', 'year'], how='left') \
 .merge(kof_clean, on=['country_code', 'year'], how='left')
+#? what is this doing
 
 
 # ---------------------------
@@ -55,9 +121,12 @@ def get_status(row):
         return 'missing_polyarchy'
     else:
         return 'missing_both'
-
+# we are seeing if any of the values are missing to put them in the column next to them
 
 merged['data_status'] = merged.apply(get_status, axis=1)
+# we are actually running that function
+#? what is axis doing
+
 
 # ---------------------------
 # STEP 5: Add regime type and category based on most recent classification
@@ -70,7 +139,8 @@ regime_mapping = {
     3: 'Liberal Democracy'
 }
 
-# Special country code mappings
+# Special country code mappings for cases where we cant get the country code
+#? why would some instances not have a country code
 special_country_mappings = {
     'AFG': 'Afghanistan',
     'ARE': 'United Arab Emirates',
@@ -102,9 +172,9 @@ merged['Regime_Type'] = merged['v2x_regime'].map(regime_mapping)
 # Apply special country name mappings
 merged.loc[merged['country_code'].isin(special_country_mappings.keys()), 'country_name'] = \
 merged.loc[merged['country_code'].isin(special_country_mappings.keys()), 'country_code'].map(special_country_mappings)
+#? what is this doing
 
-
-# Get the most recent regime type for categorization
+# Get the most recent regime type for categorization, this is for the edge case where we may not have a regime in 2020
 def get_most_recent_regime(country_data):
     # Look backwards from 2020 until we find a valid regime type
     for year in range(2020, 1969, -1):
@@ -112,25 +182,26 @@ def get_most_recent_regime(country_data):
         if not year_data.empty and pd.notnull(year_data['v2x_regime'].iloc[0]):
             return regime_mapping.get(year_data['v2x_regime'].iloc[0])
     return 'Uncategorized'  # If no regime type found
-
+#? what is the illoc function doing
 
 # Apply categorization
 categories = {}
-for country in merged['country_code'].unique():
-    country_data = merged[merged['country_code'] == country].sort_values(
-        'year', ascending=False)
-    categories[country] = get_most_recent_regime(country_data)
+#? how does this equation work
+for country in merged['country_code'].unique(): #for every unique country code in our merge list
+    country_data = merged[merged['country_code'] == country].sort_values('year', ascending=False) # the bool is because we are sotrign from highest to lowest
+    categories[country] = get_most_recent_regime(country_data) #this is where we actually put the most recent regime from highest to lowest and call the function
 
-merged['Category'] = merged['country_code'].map(categories)
+merged['Category'] = merged['country_code'].map(categories) #? what is this doing here
 
 # ---------------------------
 # STEP 6: Check for missing years and data quality
 # ---------------------------
 print("\n[DATA QUALITY REPORT]")
-print("=" * 80)
+print("=" * 80) #?
 
 # Get country names from V-Dem dataset
 #country_names = vdem[['country_code', 'country_name']].drop_duplicates().set_index('country_code')['country_name'].to_dict()
+#? why are these commented out here
 
 for code in sorted(all_codes):
     sub = merged[merged['country_code'] == code]

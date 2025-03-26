@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 import os
 
 # Create plots directory if it doesn't exist
@@ -26,7 +27,10 @@ vdem = pd.read_csv('data/V-Dem-CY-Core-v15.csv',
                    ])
 vdem = vdem.rename(columns={'country_text_id': 'country_code'})
 vdem['country_code'] = vdem['country_code'].astype(str).str.strip()
-vdem = vdem[vdem['year'].between(1970, 2020)]
+vdem['year'] = pd.to_numeric(vdem['year'], errors='coerce')
+vdem['v2x_regime'] = pd.to_numeric(vdem['v2x_regime'], errors='coerce')
+vdem['v2x_polyarchy'] = pd.to_numeric(vdem['v2x_polyarchy'], errors='coerce')
+vdem = vdem[vdem['year'].between(1970, 2020)].dropna(subset=['v2x_polyarchy', 'v2x_regime'])
 
 # Get all unique country codes from both datasets
 all_codes = set(vdem['country_code'].unique()) & set(
@@ -283,7 +287,7 @@ with pd.ExcelWriter("data/democracy_trade_analysis.xlsx",
                 series.astype(str).apply(len).max(), len(str(series.name))) + 2
             worksheet.set_column(idx, idx, max_length)
 
-print("[INFO] Exported to 'democracy_trade_analysis.xlsx'")
+
 
 # ---------------------------
 # STEP 8: Create Visualizations
@@ -306,6 +310,45 @@ y2_min = min(df['KOFTrGIdf'].min() for df in all_regime_data)
 y2_max = max(df['KOFTrGIdf'].max() for df in all_regime_data)
 
 # Create individual regime plots for aggregate folder
+# Create global average plot first
+global_data = merged.groupby('year').agg({
+    'v2x_polyarchy': 'mean',
+    'KOFTrGIdf': 'mean'
+}).reset_index()
+
+fig, ax1 = plt.subplots(figsize=(12, 8))
+ax2 = ax1.twinx()
+
+line1 = ax1.plot(global_data['year'],
+                 global_data['v2x_polyarchy'],
+                 color='blue',
+                 linewidth=2,
+                 label='Democracy Score')
+line2 = ax2.plot(global_data['year'],
+                 global_data['KOFTrGIdf'],
+                 color='green',
+                 linewidth=2,
+                 label='Trade Openness')
+
+ax1.set_xlabel('Year')
+ax1.set_ylabel('Democracy Score', color='blue')
+ax2.set_ylabel('Trade Openness (KOF)', color='green')
+ax1.set_title('Global Average: Democracy vs Trade Openness')
+
+ax1.set_xlim(1970, 2020)
+ax1.grid(True, alpha=0.3)
+
+lines = line1 + line2
+labels = [l.get_label() for l in lines]
+ax1.legend(lines, labels, loc='upper left')
+
+plt.tight_layout()
+plt.savefig('plots/aggregate/democracy_vs_trade_global_average.png',
+            dpi=300,
+            bbox_inches='tight')
+plt.close()
+
+# Then create individual regime plots
 for regime, regime_data in zip(sorted(merged['Regime_Type'].dropna().unique()),
                                all_regime_data):
     fig, ax1 = plt.subplots(figsize=(12, 8))
