@@ -12,7 +12,7 @@ os.makedirs('plots/individual', exist_ok=True)
 # STEP 1: Load KOF Excel
 # ---------------------------
 kof = pd.read_excel('data/KOFGI_2024_public.xlsx',
-                    usecols=['code', 'year', 'KOFTrGIdf'])
+                        usecols=['code', 'year', 'KOFTrGIdf'])
 kof = kof.rename(columns={'code': 'country_code'})
 kof['country_code'] = kof['country_code'].astype(str).str.strip()
 kof = kof[kof['year'].between(1970, 2020)]
@@ -21,10 +21,10 @@ kof = kof[kof['year'].between(1970, 2020)]
 # STEP 2: Load V-Dem CSV
 # ---------------------------
 vdem = pd.read_csv('data/V-Dem-CY-Core-v15.csv',
-                   usecols=[
-                       'country_text_id', 'country_name', 'year', 'v2x_regime',
-                       'v2x_polyarchy'
-                   ])
+                       usecols=[
+                           'country_text_id', 'country_name', 'year', 'v2x_regime',
+                           'v2x_polyarchy'
+                       ])
 vdem = vdem.rename(columns={'country_text_id': 'country_code'})
 vdem['country_code'] = vdem['country_code'].astype(str).str.strip()
 vdem['year'] = pd.to_numeric(vdem['year'], errors='coerce')
@@ -40,8 +40,8 @@ all_codes = set(vdem['country_code'].unique()) & set(
 # STEP 3: Create complete 1970–2020 year set per country
 # ---------------------------
 full_years = pd.DataFrame([(c, y) for c in all_codes
-                           for y in range(1970, 2021)],
-                          columns=['country_code', 'year'])
+                            for y in range(1970, 2021)],
+                             columns=['country_code', 'year'])
 
 # Merge V-Dem and KOF separately
 vdem_clean = vdem[[
@@ -232,7 +232,7 @@ for category in sorted(merged['Category'].unique()):
 # ---------------------------
 merged = merged.sort_values(by=['Category', 'country_name', 'year'])
 with pd.ExcelWriter("data/democracy_trade_analysis.xlsx",
-                    engine='xlsxwriter') as writer:
+                        engine='xlsxwriter') as writer:
     # Create formats
     header_format = writer.book.add_format({
         'bold': True,
@@ -527,8 +527,31 @@ for country_code in all_codes:
                 bbox_inches='tight')
     plt.close()
 
-print(
-    "[INFO] Regime-level plot saved as 'plots/aggregate/democracy_vs_trade_by_regime.png'"
-)
+# Create KOF trade comparison plot across regimes
+plt.figure(figsize=(12, 8))
+regime_colors = {
+    'Liberal Democracy': '#2ecc71',
+    'Electoral Democracy': '#3498db',
+    'Electoral Autocracy': '#e74c3c',
+    'Closed Autocracy': '#2c3e50'
+}
+regimes = sorted(merged['Regime_Type'].dropna().unique())
+for regime in sorted(regimes):
+    regime_data = merged[merged['Regime_Type'] == regime].groupby('year')['KOFTrGIdf'].mean().reset_index()
+    plt.plot(regime_data['year'], regime_data['KOFTrGIdf'],
+            label=regime, color=regime_colors[regime], linewidth=2)
+
+plt.xlabel('Year')
+plt.ylabel('Trade Openness (KOF)')
+plt.title('Trade Openness Comparison Across Regime Types (1970-2020)')
+plt.grid(True, alpha=0.3)
+plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+plt.tight_layout()
+plt.savefig('plots/aggregate/trade_openness_comparison.png',
+            dpi=300, bbox_inches='tight')
+plt.close()
+
+print("[INFO] Regime-level plot saved as 'plots/aggregate/democracy_vs_trade_by_regime.png'")
+print("[INFO] Trade openness comparison saved as 'plots/aggregate/trade_openness_comparison.png'")
 print("[INFO] Individual country plots saved in 'plots/individual' directory")
 print("[INFO] Done!")
