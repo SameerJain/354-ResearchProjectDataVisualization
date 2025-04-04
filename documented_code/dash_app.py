@@ -1,69 +1,10 @@
-'''
-equation for the correlation coefficient: https://numpy.org/doc/2.2/reference/generated/numpy.corrcoef.html
-slope is calculated by polyfit function, then poly1d turns it into a callable function: https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html
+"""
+Democracy vs Trade Openness Research Dashboard
+-----------------------------------------
+A Dash web application for visualizing democracy scores and trade openness data
+across different countries and regime categories from 1970-2020.
+"""
 
-'''
-
-'''
-1. IMPORT necessary libraries (dash, pandas, numpy, plotly)
-
-2. LOAD DATA
-   - Read Excel file with democracy and trade data
-   - Extract unique countries and regime categories
-   - Create dropdown options list combining categories and countries
-
-3. INITIALIZE Dash app with dark theme
-
-4. DEFINE app layout
-   - Create container with dark blue background
-   - Add header
-   - Create row with two columns
-     - Left column: Country dropdown and time series graph
-     - Right column: Category comparison graph
-   - Create second row
-     - Full-width correlation scatter plot
-
-5. DEFINE correlation scatter plot callback:
-   - INPUT: selected country/category from dropdown
-   - FUNCTION update_scatter():
-     - IF selection is a category average
-       - Filter data for that category
-       - Calculate means by year
-     - ELSE
-       - Filter data for selected country
-     - Create scatter plot with points colored by year
-     - Calculate trend line coefficients using linear regression
-     - Calculate correlation coefficient
-     - Add trend line to plot
-     - Update layout with titles and styling
-     - RETURN figure
-
-6. DEFINE country time series callback:
-   - INPUT: selected country/category from dropdown
-   - FUNCTION update_country_graph():
-     - Filter data similar to previous callback
-     - Create figure with dual y-axes
-     - Identify and highlight missing data periods
-     - Add democracy score line (primary y-axis)
-     - Add trade openness line (secondary y-axis)
-     - Add regime type indicators at bottom
-     - Update layout
-     - RETURN figure
-
-7. DEFINE category comparison callback:
-   - INPUT: selected country (not used)
-   - FUNCTION update_category_graph():
-     - Create 2×2 grid of subplots
-     - FOR each regime category:
-       - Calculate averages by year
-       - Determine subplot position
-       - Add democracy score line
-       - Add trade openness line
-     - Update layout
-     - RETURN figure
-
-8. RUN the server
-'''
 import dash
 import dash_bootstrap_components as dbc
 from dash import dcc, html, Input, Output
@@ -72,294 +13,215 @@ import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
+# Constants for consistent styling and colors
+REGIME_COLORS = {
+    'Liberal Democracy': '#2ecc71',
+    'Electoral Democracy': '#3498db',
+    'Electoral Autocracy': '#e74c3c',
+    'Closed Autocracy': '#8e44ad'
+}
 
-# ----------------------
-# DATA LOADING AND PREPARATION
-# ----------------------
+PLOT_STYLE = {
+    'template': "plotly_dark",
+    'paper_bgcolor': '#172a45',
+    'plot_bgcolor': '#172a45',
+    'height': 500,
+    'legend': {
+        'orientation': "h",
+        'yanchor': "bottom",
+        'y': -0.3,
+        'xanchor': "center",
+        'x': 0.5
+    },
+    'margin': {'b': 100}
+}
 
 def load_data():
     """Load and prepare data from Excel file."""
-    excel_file = pd.ExcelFile('data/democracy_trade_analysis.xlsx')
     df = pd.concat([
-        pd.read_excel(excel_file, sheet_name=sheet)
-        for sheet in excel_file.sheet_names
-    ], ignore_index=True)
-    return df
+        pd.read_excel('data/democracy_trade_analysis.xlsx', sheet_name=sheet)
+        for sheet in pd.ExcelFile('data/democracy_trade_analysis.xlsx').sheet_names
+    ])
+    return df.dropna(subset=['country_name', 'Category'])
 
-
-def prepare_dropdown_options(df):
-    """Create dropdown options with global and category averages at top."""
+def create_dropdown_options(df):
+    """Create dropdown options with special entries at top."""
     countries = sorted(df['country_name'].dropna().unique())
     categories = sorted(df['Category'].dropna().unique())
 
-    dropdown_options = [
-        {'label': '[Global Average] All Countries', 'value': 'global_average'}
+    return ([
+        {'label': '[Global Average] All Countries', 'value': 'global_average'},
+        {'label': '[Comparison] Trade by Regime Type', 'value': 'regime_comparison'}
     ] + [
         {'label': f'[Average] {category}', 'value': f'avg_{category}'}
         for category in categories
     ] + [
         {'label': country, 'value': country}
         for country in countries
-    ]
+    ], categories)
 
-    return dropdown_options, categories
-
-
-# ----------------------
-# DATA FILTERING
-# ----------------------
-
-def filter_data(df, selected):
-    """Filter data based on dropdown selection."""
+def get_filtered_data(df, selected):
+    """Filter data based on selection and return with appropriate title."""
     if selected == 'global_average':
-        # Handle global average
         data = df.groupby('year').agg({
             'v2x_polyarchy': 'mean',
-            'KOFTrGIdf': 'mean',
-            'Regime_Type': lambda x: x.mode()[0] if not x.empty else None
+            'KOFEcGI': 'mean',
+            'Regime_Type': lambda x: x.mode().iloc[0] if not x.empty else None
         }).reset_index()
         title = "Global Average"
     elif selected.startswith('avg_'):
-        # Handle category average
-        category = selected[4:]  # Remove 'avg_' prefix
-        data = df[df['Category'] == category].groupby('year').agg({
+        category = selected[4:]
+        data = df[df['Regime_Type'] == category].groupby('year').agg({
             'v2x_polyarchy': 'mean',
-            'KOFTrGIdf': 'mean',
-            'Regime_Type': lambda x: x.mode()[0] if not x.empty else None
+            'KOFEcGI': 'mean',
+            'Regime_Type': lambda x: x.mode().iloc[0] if not x.empty else None
         }).reset_index()
         title = f"Average: {category}"
+    elif selected == 'regime_comparison':
+        data = df.groupby(['year', 'Regime_Type'])['KOFEcGI'].mean().reset_index()
+        title = "Trade Openness by Regime Type"
     else:
-        # Handle individual country
         data = df[df['country_name'] == selected]
         title = selected
 
     return data, title
 
-
-# ----------------------
-# VISUALIZATION FUNCTIONS
-# ----------------------
-
 def create_correlation_plot(data, title):
     """Create scatter plot with correlation analysis."""
+    valid_data = data.dropna(subset=['v2x_polyarchy', 'KOFEcGI'])
+
     fig = go.Figure()
 
     # Add scatter points
-    fig.add_trace(
-        go.Scatter(
-            x=data['v2x_polyarchy'],
-            y=data['KOFTrGIdf'],
-            mode='markers+text',
-            marker=dict(
-                size=10,
-                color=data['year'],
-                colorscale='Viridis',
-                showscale=True,
-                colorbar=dict(title="Year")
-            ),
-            text=data['year'],
-            textposition="top center",
-            name='Years'
-        )
-    )
+    fig.add_trace(go.Scatter(
+        x=valid_data['v2x_polyarchy'],
+        y=valid_data['KOFEcGI'],
+        mode='markers+text',
+        marker=dict(
+            size=10,
+            color=valid_data['year'],
+            colorscale='Viridis',
+            showscale=True,
+            colorbar=dict(title="Year")
+        ),
+        text=valid_data['year'],
+        textposition="top center",
+        name='Years'
+    ))
 
-    # Add trend line and calculate statistics
-    coefficients = np.polyfit(data['v2x_polyarchy'], data['KOFTrGIdf'], 1)
-    slope = coefficients[0]
-    polynomial = np.poly1d(coefficients)
-    x_range = np.linspace(data['v2x_polyarchy'].min(), data['v2x_polyarchy'].max(), 100)
+    # Add trend line if enough data points
+    if len(valid_data) > 1:
+        coefficients = np.polyfit(valid_data['v2x_polyarchy'], valid_data['KOFEcGI'], 1)
+        correlation = np.corrcoef(valid_data['v2x_polyarchy'], valid_data['KOFEcGI'])[0, 1]
+        x_range = np.linspace(valid_data['v2x_polyarchy'].min(), valid_data['v2x_polyarchy'].max(), 100)
 
-    # Calculate correlation coefficient
-    correlation = np.corrcoef(data['v2x_polyarchy'], data['KOFTrGIdf'])[0, 1]
-
-    fig.add_trace(
-        go.Scatter(
+        fig.add_trace(go.Scatter(
             x=x_range,
-            y=polynomial(x_range),
+            y=coefficients[0] * x_range + coefficients[1],
             mode='lines',
-            name=f'R: {correlation:.2f}, Slope: {slope:.2f}',
+            name=f'Correlation: {correlation:.2f}',
             line=dict(color='red', dash='dash'),
-            hovertemplate='Slope: %{customdata[0]:.2f}, R: %{customdata[1]:.2f}<extra></extra>',
-            customdata=np.column_stack((np.full(len(x_range), slope), np.full(len(x_range), correlation)))
-        )
-    )
+            hovertemplate='R = %{customdata:.2f}<extra></extra>',
+            customdata=np.full(len(x_range), correlation)
+        ))
 
-    # Update layout
     fig.update_layout(
         title=f'{title}: Democracy vs Trade Correlation',
         xaxis_title='Democracy Score',
         yaxis_title='Trade Openness',
-        template="plotly_dark",
-        paper_bgcolor='#172a45',
-        plot_bgcolor='#172a45',
-        height=500,
-        legend=dict(
-            orientation="h",
-            yanchor="bottom",
-            y=-0.3,
-            xanchor="center",
-            x=0.5
-        ),
-        margin=dict(b=100)  # Add more bottom margin
+        **PLOT_STYLE
     )
 
     return fig
 
-
-def find_missing_data_ranges(data):
-    """Identify continuous ranges of missing data."""
-    missing_ranges = []
-    start_year = None
-
-    for year in range(1970, 2021):
-        year_data = data[data['year'] == year]
-        is_missing = (
-            year_data.empty or
-            year_data['v2x_polyarchy'].isnull().any() or
-            year_data['KOFTrGIdf'].isnull().any()
-        )
-
-        if is_missing and start_year is None:
-            start_year = year
-        elif not is_missing and start_year is not None:
-            missing_ranges.append((start_year, year))
-            start_year = None
-
-    if start_year is not None:
-        missing_ranges.append((start_year, 2021))
-
-    return missing_ranges
-
-
 def create_time_series(data, title):
-    """Create time series with dual y-axes and regime indicators."""
+    """Create time series plot with regime indicators."""
     fig = make_subplots(specs=[[{"secondary_y": True}]])
 
-    # Highlight missing data
-    missing_ranges = find_missing_data_ranges(data)
-    for start, end in missing_ranges:
-        fig.add_vrect(
-            x0=start - 0.5,
-            x1=end - 0.5,
-            fillcolor="rgba(255, 0, 0, 0.15)",
-            layer="below",
-            line_width=0,
-            name="Missing Data"
-        )
-
-    # Add democracy score line
-    fig.add_trace(
-        go.Scatter(
-            x=data['year'],
-            y=data['v2x_polyarchy'],
-            name="Democracy Score",
-            line=dict(color='#00bfff')
-        ),
-        secondary_y=False
-    )
-
-    # Add trade openness line
-    fig.add_trace(
-        go.Scatter(
-            x=data['year'],
-            y=data['KOFTrGIdf'],
-            name="Trade Openness",
-            line=dict(color='green')
-        ),
-        secondary_y=True
-    )
-
-    # Add regime indicators only for individual country views
-    if not title.startswith('Average:') and title != "Global Average":
-        regime_colors = {
-            'Liberal Democracy': '#2ecc71',
-            'Electoral Democracy': '#3498db',
-            'Electoral Autocracy': '#e74c3c',
-            'Closed Autocracy': '#2c3e50'
-        }
-
-        for regime_type in regime_colors:
-            regime_years = data[data['Regime_Type'] == regime_type]['year']
-            if not regime_years.empty:
+    if title == "Trade Openness by Regime Type":
+        for regime in sorted(REGIME_COLORS.keys()):
+            regime_data = data[data['Regime_Type'] == regime]
+            if not regime_data.empty:
                 fig.add_trace(
                     go.Scatter(
-                        x=regime_years,
-                        y=[0] * len(regime_years),
-                        name=regime_type,
-                        mode='lines',
-                        line=dict(color=regime_colors[regime_type], width=15),
-                        showlegend=True
+                        x=regime_data['year'],
+                        y=regime_data['KOFEcGI'],
+                        name=regime,
+                        line=dict(color=REGIME_COLORS[regime])
                     ),
                     secondary_y=False
                 )
+    else:
+        fig.add_trace(
+            go.Scatter(
+                x=data['year'],
+                y=data['v2x_polyarchy'],
+                name="Democracy Score",
+                line=dict(color='#00bfff')
+            ),
+            secondary_y=False
+        )
+        fig.add_trace(
+            go.Scatter(
+                x=data['year'],
+                y=data['KOFEcGI'],
+                name="Trade Openness",
+                line=dict(color='green')
+            ),
+            secondary_y=True
+        )
 
-    # Update layout
+        if not any(x in title for x in ['Average:', 'Global Average']):
+            for regime_type, color in REGIME_COLORS.items():
+                regime_years = data[data['Regime_Type'] == regime_type]['year']
+                if not regime_years.empty:
+                    fig.add_trace(
+                        go.Scatter(
+                            x=regime_years,
+                            y=[0] * len(regime_years),
+                            name=regime_type,
+                            mode='lines',
+                            line=dict(color=color, width=15)
+                        ),
+                        secondary_y=False
+                    )
+
     fig.update_layout(
         title=f"{title}: Democracy and Trade Analysis",
-        template="plotly_dark",
-        paper_bgcolor='#172a45',
-        plot_bgcolor='#172a45',
-        font=dict(color='#ffffff'),
-        height=500,
-        legend=dict(
-            orientation="h",
-            yanchor="bottom",
-            y=-0.3,
-            xanchor="center",
-            x=0.5
-        ),
-        margin=dict(b=100)
+        **PLOT_STYLE
     )
 
     return fig
-
 
 def create_category_overview(df, categories):
     """Create 2x2 grid showing time series for all categories."""
     fig = make_subplots(
-        rows=2,
-        cols=2,
+        rows=2, cols=2,
         subplot_titles=categories,
-        specs=[
-            [{"secondary_y": True}, {"secondary_y": True}],
-            [{"secondary_y": True}, {"secondary_y": True}]
-        ]
+        specs=[[{"secondary_y": True}] * 2] * 2
     )
 
     for idx, category in enumerate(categories, 1):
-        category_data = df[df['Category'] == category].groupby('year').agg({
+        row, col = (idx - 1) // 2 + 1, (idx - 1) % 2 + 1
+
+        category_data = df[df['Regime_Type'] == category].groupby('year').agg({
             'v2x_polyarchy': 'mean',
-            'KOFTrGIdf': 'mean'
+            'KOFEcGI': 'mean'
         }).reset_index()
 
-        row = (idx - 1) // 2 + 1
-        col = (idx - 1) % 2 + 1
+        for trace_idx, (metric, color) in enumerate([('v2x_polyarchy', '#00bfff'), ('KOFEcGI', 'green')]):
+            fig.add_trace(
+                go.Scatter(
+                    x=category_data['year'],
+                    y=category_data[metric],
+                    name=["Democracy Score", "Trade Openness"][trace_idx] if idx == 1 else None,
+                    line=dict(color=color),
+                    showlegend=(idx == 1)
+                ),
+                row=row, col=col,
+                secondary_y=bool(trace_idx)
+            )
 
-        # Add democracy score line
-        fig.add_trace(
-            go.Scatter(
-                x=category_data['year'],
-                y=category_data['v2x_polyarchy'],
-                name="Democracy Score" if idx == 1 else None,
-                line=dict(color='#00bfff'),
-                showlegend=(idx == 1)
-            ),
-            row=row, col=col, secondary_y=False
-        )
-
-        # Add trade openness line
-        fig.add_trace(
-            go.Scatter(
-                x=category_data['year'],
-                y=category_data['KOFTrGIdf'],
-                name="Trade Openness" if idx == 1 else None,
-                line=dict(color='green'),
-                showlegend=(idx == 1)
-            ),
-            row=row, col=col, secondary_y=True
-        )
-
-    # Update layout
     fig.update_layout(
         height=652,
         showlegend=True,
@@ -378,162 +240,103 @@ def create_category_overview(df, categories):
 
     return fig
 
+def create_app_layout():
+    """Create the application layout."""
+    return dbc.Container([
+        html.Div(
+            style={'backgroundColor': '#0a192f', 'padding': '20px', 'minHeight': '100vh'},
+            children=[
+                html.H1(
+                    "Democracy vs. Trade Openness Research - PSC354 Group 9",
+                    className="text-center my-4",
+                    style={'color': '#64ffda', 'fontFamily': 'Helvetica, Arial, sans-serif', 'letterSpacing': '1px'}
+                ),
+                dbc.Row([
+                    dbc.Col([
+                        dbc.Card([
+                            dbc.CardBody([
+                                html.Div(
+                                    style={'backgroundColor': '#172a45', 'padding': '15px', 'borderRadius': '5px'},
+                                    children=[
+                                        html.H4("Select Country/Category"),
+                                        dcc.Dropdown(
+                                            id='country-dropdown',
+                                            options=dropdown_options,
+                                            value='global_average',
+                                            style={'backgroundColor': '#1a365d', 'color': 'white'},
+                                            className='dropdown-dark',
+                                        )
+                                    ]
+                                )
+                            ])
+                        ], className="mb-3"),
+                        dbc.Card([
+                            dbc.CardBody([
+                                html.Div(
+                                    style={'backgroundColor': '#172a45', 'padding': '15px', 'borderRadius': '5px'},
+                                    children=[dcc.Graph(id='country-graph')]
+                                )
+                            ])
+                        ])
+                    ], width=6),
+                    dbc.Col([
+                        dbc.Card([
+                            dbc.CardBody([
+                                html.Div(
+                                    style={'backgroundColor': '#172a45', 'padding': '15px', 'borderRadius': '5px'},
+                                    children=[dcc.Graph(id='category-graph')]
+                                )
+                            ])
+                        ])
+                    ], width=6)
+                ]),
+                dbc.Row([
+                    dbc.Col([
+                        dbc.Card([
+                            dbc.CardBody([
+                                html.Div(
+                                    style={'backgroundColor': '#172a45', 'padding': '15px', 'borderRadius': '5px'},
+                                    children=[dcc.Graph(id='correlation-scatter')]
+                                )
+                            ])
+                        ])
+                    ], width=12)
+                ], className="mt-3")
+            ]
+        )
+    ], fluid=True, style={'backgroundColor': '#0a192f', 'padding': '0'})
 
-# ----------------------
-# APP INITIALIZATION
-# ----------------------
-
-# Load data
+# Initialize application components
 df = load_data()
-dropdown_options, categories = prepare_dropdown_options(df)
-
-# Initialize app
+dropdown_options, categories = create_dropdown_options(df)
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
-
-# ----------------------
-# APP LAYOUT
-# ----------------------
-
-app.layout = dbc.Container([
-    html.Div(
-        style={'backgroundColor': '#0a192f', 'padding': '20px', 'minHeight': '100vh'},
-        children=[
-            # Header
-            html.H1(
-                "Democracy vs. Trade Openness Research - PSC354 Group 9",
-                className="text-center my-4",
-                style={
-                    'color': '#64ffda',
-                    'fontFamily': 'Helvetica, Arial, sans-serif',
-                    'letterSpacing': '1px'
-                }
-            ),
-
-            # Top row with country/category selection and graphs
-            dbc.Row([
-                # Left column
-                dbc.Col([
-                    # Dropdown card
-                    dbc.Card([
-                        dbc.CardBody([
-                            html.Div(
-                                style={
-                                    'backgroundColor': '#172a45',
-                                    'padding': '15px',
-                                    'borderRadius': '5px'
-                                },
-                                children=[
-                                    html.H4("Select Country/Category"),
-                                    dcc.Dropdown(
-                                        id='country-dropdown',
-                                        options=dropdown_options,
-                                        value='global_average',
-                                        style={
-                                            'backgroundColor': '#1a365d',
-                                            'color': 'white'
-                                        },
-                                        className='dropdown-dark',
-                                    )
-                                ]
-                            )
-                        ])
-                    ], className="mb-3"),
-
-                    # Country graph card
-                    dbc.Card([
-                        dbc.CardBody([
-                            html.Div(
-                                style={
-                                    'backgroundColor': '#172a45',
-                                    'padding': '15px',
-                                    'borderRadius': '5px'
-                                },
-                                children=[
-                                    dcc.Graph(id='country-graph')
-                                ]
-                            )
-                        ])
-                    ])
-                ], width=6),
-
-                # Right column
-                dbc.Col([
-                    # Category graph card
-                    dbc.Card([
-                        dbc.CardBody([
-                            html.Div(
-                                style={
-                                    'backgroundColor': '#172a45',
-                                    'padding': '15px',
-                                    'borderRadius': '5px'
-                                },
-                                children=[
-                                    dcc.Graph(id='category-graph')
-                                ]
-                            )
-                        ])
-                    ])
-                ], width=6)
-            ]),
-
-            # Bottom row with correlation scatter plot
-            dbc.Row([
-                dbc.Col([
-                    dbc.Card([
-                        dbc.CardBody([
-                            html.Div(
-                                style={
-                                    'backgroundColor': '#172a45',
-                                    'padding': '15px',
-                                    'borderRadius': '5px'
-                                },
-                                children=[
-                                    dcc.Graph(id='correlation-scatter')
-                                ]
-                            )
-                        ])
-                    ])
-                ], width=12)
-            ], className="mt-3")
-        ]
-    )
-], fluid=True, style={'backgroundColor': '#0a192f', 'padding': '0'})
-
-
-# ----------------------
-# CALLBACKS
-# ----------------------
+app.layout = create_app_layout()
 
 @app.callback(
     Output('correlation-scatter', 'figure'),
     Input('country-dropdown', 'value')
 )
 def update_scatter(selected):
-    data, title = filter_data(df, selected)
-    data = data.dropna(subset=['v2x_polyarchy', 'KOFTrGIdf'])
+    """Updates correlation scatter plot based on selection."""
+    data, title = get_filtered_data(df, selected)
     return create_correlation_plot(data, title)
-
 
 @app.callback(
     Output('country-graph', 'figure'),
     Input('country-dropdown', 'value')
 )
 def update_country_graph(selected):
-    data, title = filter_data(df, selected)
+    """Updates time series plot based on selection."""
+    data, title = get_filtered_data(df, selected)
     return create_time_series(data, title)
-
 
 @app.callback(
     Output('category-graph', 'figure'),
     Input('country-dropdown', 'value')
 )
 def update_category_graph(_):
+    """Updates category overview plot (static content)."""
     return create_category_overview(df, categories)
-
-
-# ----------------------
-# RUN APP
-# ----------------------
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

@@ -1,181 +1,595 @@
-Correlation Coefficients by Category:
-=====================================
+Countries by Regime Type with Correlations:
+==========================================
 
-Liberal Democracy:
+
+Closed Autocracy:
 -----------------
-Belgium: 0.887
-Denmark: 0.850
-Estonia: 0.778
-Finland: 0.772
-United Kingdom: 0.760
-Netherlands: 0.744
-Italy: 0.721
-France: 0.700
-Ireland: 0.699
-Seychelles: 0.689
-Latvia: 0.674
-Austria: 0.633
-Costa Rica: 0.595
-Germany: 0.593
-United States of America: 0.565
-South Korea: 0.480
-Iceland: 0.442
-Switzerland: 0.439
-Spain: 0.418
-Greece: 0.405
-Portugal: 0.384
-Sweden: 0.346
-Australia: 0.317
-Uruguay: 0.292
-Israel: 0.122
-Slovenia: -0.071
-New Zealand: -0.161
-Trinidad and Tobago: -0.407
-Japan: -0.425
-Barbados: -0.462
-Luxembourg: -0.548
-Norway: -0.636
-Botswana: -0.691
-Cyprus: -0.730
-
-Electoral Democracy:
--------------------
-Albania: 0.920
-Georgia: 0.883
-Mauritius: 0.795
-Ghana: 0.775
-Peru: 0.771
-Mongolia: 0.770
-Mexico: 0.766
-Burkina Faso: 0.765
-Senegal: 0.764
-Guinea-Bissau: 0.759
-Sao Tome and Principe: 0.713
-El Salvador: 0.702
-Paraguay: 0.702
-Madagascar: 0.685
-Bulgaria: 0.650
-Colombia: 0.628
-South Africa: 0.623
-Panama: 0.598
-Malta: 0.596
-Bhutan: 0.596
-Guatemala: 0.574
-Chile: 0.547
-Slovakia: 0.534
-Brazil: 0.516
-Indonesia: 0.503
-Croatia: 0.482
-Sierra Leone: 0.482
-Dominican Republic: 0.470
-Cape Verde: 0.460
-North Macedonia: 0.411
-Ecuador: 0.402
-Tunisia: 0.372
-Lithuania: 0.363
-Bosnia and Herzegovina: 0.357
-Canada: 0.319
-Nepal: 0.312
-Niger: 0.302
-Argentina: 0.280
-Vanuatu: 0.262
-Poland: 0.249
-Maldives: 0.245
-Jamaica: 0.159
-Solomon Islands: 0.159
-Nigeria: 0.139
-Liberia: 0.095
-Moldova: -0.024
-Suriname: -0.093
-Lesotho: -0.156
-Guyana: -0.160
-Namibia: -0.166
-Malawi: -0.253
-Ukraine: -0.319
-Sri Lanka: -0.340
-Armenia: -0.471
-Czechia: -0.691
+Morocco: 0.911
+Qatar: 0.897
+Oman: 0.895
+Hong Kong: 0.895
+United Arab Emirates: 0.855
+Yemen: 0.815
+Somalia: 0.807
+Jordan: 0.790
+Bahrain: 0.775
+Libya: 0.648
+Saudi Arabia: 0.508
+Eritrea: 0.484
+Thailand: 0.464
+Kuwait: 0.377
+Syria: 0.315
+Sudan: 0.259
+China: 0.243
+Uzbekistan: -0.046
+Laos: -0.142
+Eswatini: -0.313
+Cuba: insufficient data
+North Korea: insufficient data
 
 Electoral Autocracy:
--------------------
-Tanzania: 0.875
-Chad: 0.814
-Cambodia: 0.778
-Togo: 0.776
-Equatorial Guinea: 0.766
-Philippines: 0.764
-Guinea: 0.752
-Ethiopia: 0.730
-Singapore: 0.716
-The Gambia: 0.688
-Hungary: 0.682
-Burundi: 0.650
-Comoros: 0.581
-Serbia: 0.579
-Uganda: 0.577
-Bolivia: 0.536
-Mali: 0.518
-Mauritania: 0.511
-Malaysia: 0.510
-Venezuela: 0.503
-Honduras: 0.493
-Angola: 0.465
-Papua New Guinea: 0.432
-Republic of the Congo: 0.403
-Rwanda: 0.302
-Kyrgyzstan: 0.297
-Egypt: 0.289
-Mozambique: 0.281
-Iran: 0.267
-Algeria: 0.236
-Benin: 0.211
-Afghanistan: 0.149
-Central African Republic: 0.143
-Lebanon: 0.139
-Azerbaijan: 0.128
-Cameroon: 0.068
-Bangladesh: 0.064
-Tajikistan: 0.059
-Iraq: 0.033
-Pakistan: 0.006
-Russia: 0.006
-Nicaragua: 0.005
-Burma/Myanmar: 0.003
-India: -0.059
-Montenegro: -0.078
-Türkiye: -0.080
-Zimbabwe: -0.165
-Gabon: -0.187
-Ivory Coast: -0.199
-Haiti: -0.290
-Kenya: -0.453
-Djibouti: -0.468
-Turkmenistan: -0.511
-Vietnam: -0.574
-Kazakhstan: -0.576
-Fiji: -0.674
-Zambia: -0.825
-Belarus: -0.895
+--------------------
+Singapore: 0.915
+Ethiopia: 0.851
+Tanzania: 0.848
+Bolivia: 0.819
+Mali: 0.819
+Equatorial Guinea: 0.818
+Central African Republic: 0.818
+Chad: 0.796
+Philippines: 0.795
+Uganda: 0.792
+Mozambique: 0.765
+Pakistan: 0.761
+Lebanon: 0.750
+Hungary: 0.740
+Venezuela: 0.736
+Serbia: 0.724
+Kenya: 0.721
+Togo: 0.719
+Algeria: 0.717
+Haiti: 0.713
+Zambia: 0.709
+Cambodia: 0.707
+Burundi: 0.701
+Afghanistan: 0.685
+Guinea: 0.673
+Malaysia: 0.670
+Cameroon: 0.608
+Republic of the Congo: 0.598
+Comoros: 0.597
+Honduras: 0.529
+Angola: 0.494
+Montenegro: 0.470
+Iran: 0.428
+Ivory Coast: 0.428
+Egypt: 0.426
+Benin: 0.419
+Mauritania: 0.378
+Kyrgyzstan: 0.324
+Rwanda: 0.297
+Nicaragua: 0.291
+Bangladesh: 0.285
+Djibouti: 0.244
+Burma/Myanmar: 0.164
+Gabon: 0.153
+Türkiye: 0.092
+India: -0.035
+The Gambia: -0.254
+Russia: -0.325
+Zimbabwe: -0.361
+Tajikistan: -0.382
+Vietnam: -0.397
+Iraq: -0.406
+Turkmenistan: -0.583
+Fiji: -0.629
+Azerbaijan: -0.672
+Kazakhstan: -0.737
+Papua New Guinea: -0.765
+Belarus: -0.835
+
+Electoral Democracy:
+--------------------
+Paraguay: 0.951
+Bhutan: 0.942
+Albania: 0.918
+El Salvador: 0.914
+Colombia: 0.913
+Senegal: 0.898
+Ghana: 0.892
+Jamaica: 0.888
+Georgia: 0.886
+Nepal: 0.881
+Croatia: 0.875
+South Africa: 0.871
+Guatemala: 0.863
+Mexico: 0.857
+Mongolia: 0.855
+Guinea-Bissau: 0.817
+Panama: 0.799
+Sao Tome and Principe: 0.792
+Dominican Republic: 0.776
+Bulgaria: 0.739
+Lesotho: 0.737
+Slovakia: 0.728
+Malta: 0.727
+Cape Verde: 0.725
+Peru: 0.710
+Maldives: 0.707
+Indonesia: 0.674
+Nigeria: 0.670
+Namibia: 0.658
+North Macedonia: 0.651
+Madagascar: 0.642
+Ecuador: 0.637
+Chile: 0.633
+Brazil: 0.624
+Burkina Faso: 0.598
+Poland: 0.598
+Niger: 0.566
+Sierra Leone: 0.531
+Bosnia and Herzegovina: 0.500
+Argentina: 0.498
+Solomon Islands: 0.494
+Mauritius: 0.480
+Guyana: 0.467
+Liberia: 0.456
+Suriname: 0.376
+Lithuania: 0.372
+Vanuatu: 0.363
+Malawi: 0.355
+Tunisia: 0.324
+Canada: 0.245
+Moldova: 0.083
+Ukraine: -0.192
+Armenia: -0.504
+Czechia: -0.543
+Sri Lanka: -0.580
+
+Liberal Democracy:
+------------------
+Finland: 0.953
+Ireland: 0.941
+Norway: 0.921
+New Zealand: 0.915
+Belgium: 0.894
+Italy: 0.890
+Seychelles: 0.877
+France: 0.868
+Iceland: 0.796
+Germany: 0.792
+Barbados: 0.772
+Latvia: 0.765
+Netherlands: 0.738
+Uruguay: 0.737
+Estonia: 0.723
+South Korea: 0.718
+Austria: 0.714
+Costa Rica: 0.708
+Cyprus: 0.690
+Denmark: 0.661
+Portugal: 0.656
+United Kingdom: 0.648
+United States of America: 0.626
+Spain: 0.626
+Botswana: 0.599
+Greece: 0.580
+Switzerland: 0.544
+Trinidad and Tobago: 0.515
+Sweden: 0.401
+Luxembourg: 0.392
+Australia: 0.161
+Israel: 0.063
+Slovenia: -0.098
+Japan: -0.217
+
+Statistics by Regime Type:
+==================================================
+
 
 Closed Autocracy:
 ----------------
-Eritrea: 0.894
-Morocco: 0.830
-Oman: 0.752
-United Arab Emirates: 0.751
-Yemen: 0.713
-Qatar: 0.628
-Thailand: 0.493
-Libya: 0.466
-Jordan: 0.448
-China: 0.378
-Bahrain: 0.353
-Syria: 0.231
-Saudi Arabia: 0.023
-Sudan: -0.051
-Eswatini: -0.124
-Kuwait: -0.149
-Uzbekistan: -0.151
-Laos: -0.222
-Cuba: -0.665
-Hong Kong: -0.728
+Number of countries: 20
+Average correlation: 0.522
+Median correlation: 0.578
+Strongest positive: Morocco (0.911)
+Strongest negative: Eswatini (-0.313)
+
+Electoral Autocracy:
+----------------
+Number of countries: 58
+Average correlation: 0.355
+Median correlation: 0.563
+Strongest positive: Singapore (0.915)
+Strongest negative: Belarus (-0.835)
+
+Electoral Democracy:
+----------------
+Number of countries: 55
+Average correlation: 0.588
+Median correlation: 0.670
+Strongest positive: Paraguay (0.951)
+Strongest negative: Sri Lanka (-0.580)
+
+Liberal Democracy:
+----------------
+Number of countries: 34
+Average correlation: 0.634
+Median correlation: 0.711
+Strongest positive: Finland (0.953)
+Strongest negative: Japan (-0.217)
+
+Overall Statistics:
+------------------
+Total number of countries (with valid correlations): 167
+Number of countries with insufficient data: 2
+Total number of countries in dataset: 169
+Average correlation: 0.509
+Median correlation: 0.658
+Strongest positive: Finland (0.953)
+Strongest negative: Belarus (-0.835)
+
+Complete list of countries with valid correlations:
+---------------------------------------------
+Finland: 0.953
+Paraguay: 0.951
+Bhutan: 0.942
+Ireland: 0.941
+Norway: 0.921
+Albania: 0.918
+Singapore: 0.915
+New Zealand: 0.915
+El Salvador: 0.914
+Colombia: 0.913
+Morocco: 0.911
+Senegal: 0.898
+Qatar: 0.897
+Oman: 0.895
+Hong Kong: 0.895
+Belgium: 0.894
+Ghana: 0.892
+Italy: 0.890
+Jamaica: 0.888
+Georgia: 0.886
+Nepal: 0.881
+Seychelles: 0.877
+Croatia: 0.875
+South Africa: 0.871
+France: 0.868
+Guatemala: 0.863
+Mexico: 0.857
+United Arab Emirates: 0.855
+Mongolia: 0.855
+Ethiopia: 0.851
+Tanzania: 0.848
+Bolivia: 0.819
+Mali: 0.819
+Equatorial Guinea: 0.818
+Central African Republic: 0.818
+Guinea-Bissau: 0.817
+Yemen: 0.815
+Somalia: 0.807
+Panama: 0.799
+Iceland: 0.796
+Chad: 0.796
+Philippines: 0.795
+Germany: 0.792
+Sao Tome and Principe: 0.792
+Uganda: 0.792
+Jordan: 0.790
+Dominican Republic: 0.776
+Bahrain: 0.775
+Barbados: 0.772
+Latvia: 0.765
+Mozambique: 0.765
+Pakistan: 0.761
+Lebanon: 0.750
+Hungary: 0.740
+Bulgaria: 0.739
+Netherlands: 0.738
+Uruguay: 0.737
+Lesotho: 0.737
+Venezuela: 0.736
+Slovakia: 0.728
+Malta: 0.727
+Cape Verde: 0.725
+Serbia: 0.724
+Estonia: 0.723
+Kenya: 0.721
+Togo: 0.719
+South Korea: 0.718
+Algeria: 0.717
+Austria: 0.714
+Haiti: 0.713
+Peru: 0.710
+Zambia: 0.709
+Costa Rica: 0.708
+Maldives: 0.707
+Cambodia: 0.707
+Burundi: 0.701
+Cyprus: 0.690
+Afghanistan: 0.685
+Indonesia: 0.674
+Guinea: 0.673
+Nigeria: 0.670
+Malaysia: 0.670
+Denmark: 0.661
+Namibia: 0.658
+Portugal: 0.656
+North Macedonia: 0.651
+United Kingdom: 0.648
+Libya: 0.648
+Madagascar: 0.642
+Ecuador: 0.637
+Chile: 0.633
+United States of America: 0.626
+Spain: 0.626
+Brazil: 0.624
+Cameroon: 0.608
+Botswana: 0.599
+Burkina Faso: 0.598
+Poland: 0.598
+Republic of the Congo: 0.598
+Comoros: 0.597
+Greece: 0.580
+Niger: 0.566
+Switzerland: 0.544
+Sierra Leone: 0.531
+Honduras: 0.529
+Trinidad and Tobago: 0.515
+Saudi Arabia: 0.508
+Bosnia and Herzegovina: 0.500
+Argentina: 0.498
+Angola: 0.494
+Solomon Islands: 0.494
+Eritrea: 0.484
+Mauritius: 0.480
+Montenegro: 0.470
+Guyana: 0.467
+Thailand: 0.464
+Liberia: 0.456
+Iran: 0.428
+Ivory Coast: 0.428
+Egypt: 0.426
+Benin: 0.419
+Sweden: 0.401
+Luxembourg: 0.392
+Mauritania: 0.378
+Kuwait: 0.377
+Suriname: 0.376
+Lithuania: 0.372
+Vanuatu: 0.363
+Malawi: 0.355
+Tunisia: 0.324
+Kyrgyzstan: 0.324
+Syria: 0.315
+Rwanda: 0.297
+Nicaragua: 0.291
+Bangladesh: 0.285
+Sudan: 0.259
+Canada: 0.245
+Djibouti: 0.244
+China: 0.243
+Burma/Myanmar: 0.164
+Australia: 0.161
+Gabon: 0.153
+Türkiye: 0.092
+Moldova: 0.083
+Israel: 0.063
+India: -0.035
+Uzbekistan: -0.046
+Slovenia: -0.098
+Laos: -0.142
+Ukraine: -0.192
+Japan: -0.217
+The Gambia: -0.254
+Eswatini: -0.313
+Russia: -0.325
+Zimbabwe: -0.361
+Tajikistan: -0.382
+Vietnam: -0.397
+Iraq: -0.406
+Armenia: -0.504
+Czechia: -0.543
+Sri Lanka: -0.580
+Turkmenistan: -0.583
+Fiji: -0.629
+Azerbaijan: -0.672
+Kazakhstan: -0.737
+Papua New Guinea: -0.765
+Belarus: -0.835
+
+Countries with insufficient data:
+------------------------------
+Cuba (Regime: Closed Autocracy)
+North Korea (Regime: Closed Autocracy)
+
+Average Trade Openness (KOF) Rankings by Regime Type (1970-2020):
+=================================================================
+
+Closed Autocracy:
+-----------------
+Country                  Avg KOF     Max KOF
+-------------------------------------------
+Hong Kong                 79.829      85.056
+Bahrain                   73.482      83.620
+United Arab Emirates      67.254      88.065
+Qatar                     66.305      79.275
+Kuwait                    64.613      74.009
+Saudi Arabia              62.104      71.865
+Jordan                    60.642      77.607
+Oman                      54.134      69.617
+Thailand                  53.598      68.854
+Morocco                   45.682      58.447
+Yemen                     45.403      58.650
+Eswatini                  45.332      53.101
+Uzbekistan                43.346      56.317
+Eritrea                   38.532      45.658
+Syria                     37.901      52.484
+Libya                     35.226      53.795
+Laos                      35.133      57.535
+China                     33.208      52.157
+Sudan                     28.315      51.038
+Somalia                   24.072      28.580
+
+Electoral Autocracy:
+--------------------
+Country                      Avg KOF     Max KOF
+-----------------------------------------------
+Singapore                     84.903      94.102
+Malaysia                      66.049      76.678
+Lebanon                       63.427      75.994
+Hungary                       63.183      84.672
+Montenegro                    62.332      79.264
+Azerbaijan                    56.863      71.148
+Equatorial Guinea             56.205      66.530
+Kyrgyzstan                    53.775      63.322
+Papua New Guinea              51.979      60.261
+Nicaragua                     50.564      65.248
+Djibouti                      49.698      58.344
+Egypt                         49.631      62.423
+Iraq                          49.572      55.458
+Kazakhstan                    49.494      60.907
+Serbia                        47.748      72.383
+Zambia                        47.388      58.726
+Philippines                   46.601      63.976
+Republic of the Congo         46.310      54.927
+Türkiye                       46.307      57.865
+Turkmenistan                  46.152      61.089
+Honduras                      45.989      62.186
+Russia                        45.876      53.689
+Tajikistan                    45.033      55.316
+Bolivia                       44.881      54.417
+Gabon                         44.592      49.205
+Fiji                          44.428      52.286
+Angola                        44.325      59.743
+Togo                          41.908      53.658
+Belarus                       41.768      58.044
+Mozambique                    41.713      63.604
+The Gambia                    41.083      51.323
+Ivory Coast                   40.570      45.175
+Vietnam                       40.313      60.701
+Kenya                         39.975      45.502
+Cambodia                      39.040      68.649
+Mauritania                    38.927      48.747
+Venezuela                     38.394      50.553
+Burma/Myanmar                 36.211      49.735
+Mali                          35.653      43.213
+Uganda                        35.576      49.207
+Tanzania                      34.586      45.961
+Rwanda                        32.976      53.087
+Cameroon                      32.887      38.080
+Zimbabwe                      32.868      41.731
+Algeria                       31.816      43.184
+Benin                         31.467      40.421
+Pakistan                      30.527      41.214
+Afghanistan                   29.833      39.072
+Haiti                         27.978      39.237
+Guinea                        27.492      47.617
+Central African Republic      27.231      33.339
+Chad                          26.346      39.263
+India                         26.277      45.580
+Burundi                       25.668      35.421
+Comoros                       24.321      32.553
+Bangladesh                    23.245      34.187
+Ethiopia                      23.042      34.123
+Iran                          23.029      32.766
+
+Electoral Democracy:
+--------------------
+Country                    Avg KOF     Max KOF
+---------------------------------------------
+Czechia                     74.301      82.222
+Malta                       71.637      89.178
+Slovakia                    69.647      82.161
+Lithuania                   69.645      79.781
+Georgia                     61.948      80.524
+Croatia                     61.721      74.416
+Panama                      60.674      75.002
+Armenia                     59.842      69.887
+Canada                      59.210      72.152
+Bulgaria                    58.179      77.189
+Mauritius                   58.092      85.137
+Moldova                     57.470      66.270
+Chile                       55.709      73.921
+Vanuatu                     55.600      64.544
+Jamaica                     54.386      67.958
+Guyana                      53.381      65.232
+North Macedonia             53.308      67.986
+Bosnia and Herzegovina      52.578      64.768
+Ukraine                     51.436      65.690
+Tunisia                     51.055      58.117
+Maldives                    50.671      68.456
+Poland                      50.435      72.012
+Lesotho                     50.427      59.398
+Peru                        50.231      64.136
+Indonesia                   49.261      70.843
+Namibia                     48.886      53.538
+El Salvador                 47.094      61.113
+South Africa                44.891      56.776
+Liberia                     44.675      59.537
+Mexico                      43.958      60.669
+Suriname                    43.428      58.859
+Solomon Islands             42.229      53.002
+Sri Lanka                   41.233      55.693
+Cape Verde                  41.093      55.871
+Albania                     40.762      68.474
+Senegal                     40.081      49.856
+Mongolia                    39.551      63.085
+Guatemala                   39.533      54.881
+Sao Tome and Principe       39.405      61.056
+Argentina                   39.213      51.351
+Paraguay                    38.693      52.335
+Ecuador                     38.360      54.396
+Dominican Republic          38.108      54.914
+Ghana                       36.836      51.006
+Malawi                      36.436      45.328
+Colombia                    35.600      50.109
+Brazil                      35.410      47.287
+Burkina Faso                34.091      44.298
+Nigeria                     33.748      44.283
+Sierra Leone                33.496      50.121
+Madagascar                  33.149      51.859
+Bhutan                      32.014      41.387
+Guinea-Bissau               27.828      40.727
+Niger                       24.615      39.141
+Nepal                       20.368      30.991
+
+Liberal Democracy:
+------------------
+Country                      Avg KOF     Max KOF
+-----------------------------------------------
+Luxembourg                    85.147      92.443
+Ireland                       81.740      89.951
+Belgium                       81.407      87.967
+Netherlands                   80.936      89.722
+Estonia                       80.155      85.715
+Switzerland                   76.818      86.231
+Austria                       73.622      83.584
+Denmark                       73.484      84.464
+United Kingdom                73.446      81.668
+Latvia                        71.882      81.761
+Norway                        70.295      78.414
+Sweden                        70.161      83.477
+Finland                       68.927      82.938
+Germany                       67.876      79.861
+France                        67.594      79.693
+Slovenia                      64.957      76.334
+Israel                        63.708      77.328
+Portugal                      63.555      79.423
+New Zealand                   63.478      71.696
+Cyprus                        62.101      85.580
+Seychelles                    59.863      78.018
+Iceland                       58.576      75.489
+Spain                         58.342      75.767
+Australia                     57.799      69.626
+Italy                         57.548      70.918
+Greece                        57.004      74.732
+United States of America      55.111      67.882
+Costa Rica                    53.967      67.104
+Trinidad and Tobago           52.904      64.793
+Uruguay                       50.132      64.456
+Botswana                      49.903      60.178
+Barbados                      48.909      59.999
+Japan                         47.669      67.895
+South Korea                   45.788      64.188

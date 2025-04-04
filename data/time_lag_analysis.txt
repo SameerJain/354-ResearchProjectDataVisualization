@@ -1,0 +1,1540 @@
+
+=== Time Lag Analysis Results ===
+================================
+
+Analyzing Bahrain...
+Lag 1 year(s): R = 0.762
+Lag 2 year(s): R = 0.742
+Lag 3 year(s): R = 0.711
+Lag 4 year(s): R = 0.668
+Lag 5 year(s): R = 0.609
+
+Strongest correlation at 1 year lag: R = 0.762
+
+Analyzing China...
+Lag 1 year(s): R = 0.315
+Lag 2 year(s): R = 0.389
+Lag 3 year(s): R = 0.461
+Lag 4 year(s): R = 0.527
+Lag 5 year(s): R = 0.592
+
+Strongest correlation at 5 year lag: R = 0.592
+
+Analyzing Cuba...
+Lag 1 year(s): R = nan
+Lag 2 year(s): R = nan
+Lag 3 year(s): R = nan
+Lag 4 year(s): R = nan
+Lag 5 year(s): R = nan
+
+No valid correlations found for this country
+
+Analyzing Eritrea...
+Lag 1 year(s): R = 0.523
+Lag 2 year(s): R = 0.654
+Lag 3 year(s): R = 0.604
+Lag 4 year(s): R = 0.564
+Lag 5 year(s): R = 0.583
+
+Strongest correlation at 2 year lag: R = 0.654
+
+Analyzing Eswatini...
+Lag 1 year(s): R = -0.367
+Lag 2 year(s): R = -0.373
+Lag 3 year(s): R = -0.397
+Lag 4 year(s): R = -0.386
+Lag 5 year(s): R = -0.361
+
+Strongest correlation at 3 year lag: R = -0.397
+
+Analyzing Hong Kong...
+Lag 1 year(s): R = 0.935
+Lag 2 year(s): R = 0.960
+Lag 3 year(s): R = 0.973
+Lag 4 year(s): R = 0.973
+Lag 5 year(s): R = 0.965
+
+Strongest correlation at 3 year lag: R = 0.973
+
+Analyzing Jordan...
+Lag 1 year(s): R = 0.787
+Lag 2 year(s): R = 0.786
+Lag 3 year(s): R = 0.791
+Lag 4 year(s): R = 0.807
+Lag 5 year(s): R = 0.827
+
+Strongest correlation at 5 year lag: R = 0.827
+
+Analyzing Kuwait...
+Lag 1 year(s): R = 0.382
+Lag 2 year(s): R = 0.383
+Lag 3 year(s): R = 0.393
+Lag 4 year(s): R = 0.401
+Lag 5 year(s): R = 0.410
+
+Strongest correlation at 5 year lag: R = 0.410
+
+Analyzing Laos...
+Lag 1 year(s): R = -0.190
+Lag 2 year(s): R = -0.240
+Lag 3 year(s): R = -0.291
+Lag 4 year(s): R = -0.340
+Lag 5 year(s): R = -0.375
+
+Strongest correlation at 5 year lag: R = -0.375
+
+Analyzing Libya...
+Lag 1 year(s): R = 0.610
+Lag 2 year(s): R = 0.540
+Lag 3 year(s): R = 0.427
+Lag 4 year(s): R = 0.358
+Lag 5 year(s): R = 0.306
+
+Strongest correlation at 1 year lag: R = 0.610
+
+Analyzing Morocco...
+Lag 1 year(s): R = 0.915
+Lag 2 year(s): R = 0.917
+Lag 3 year(s): R = 0.922
+Lag 4 year(s): R = 0.929
+Lag 5 year(s): R = 0.938
+
+Strongest correlation at 5 year lag: R = 0.938
+
+Analyzing North Korea...
+Lag 1 year(s): R = nan
+Lag 2 year(s): R = nan
+Lag 3 year(s): R = nan
+Lag 4 year(s): R = nan
+Lag 5 year(s): R = nan
+
+No valid correlations found for this country
+
+Analyzing Oman...
+Lag 1 year(s): R = 0.885
+Lag 2 year(s): R = 0.877
+Lag 3 year(s): R = 0.869
+Lag 4 year(s): R = 0.853
+Lag 5 year(s): R = 0.832
+
+Strongest correlation at 1 year lag: R = 0.885
+
+Analyzing Qatar...
+Lag 1 year(s): R = 0.894
+Lag 2 year(s): R = 0.887
+Lag 3 year(s): R = 0.872
+Lag 4 year(s): R = 0.857
+Lag 5 year(s): R = 0.841
+
+Strongest correlation at 1 year lag: R = 0.894
+
+Analyzing Saudi Arabia...
+Lag 1 year(s): R = 0.484
+Lag 2 year(s): R = 0.454
+Lag 3 year(s): R = 0.406
+Lag 4 year(s): R = 0.344
+Lag 5 year(s): R = 0.263
+
+Strongest correlation at 1 year lag: R = 0.484
+
+Analyzing Somalia...
+Lag 1 year(s): R = 0.828
+Lag 2 year(s): R = 0.848
+Lag 3 year(s): R = 0.881
+Lag 4 year(s): R = 0.919
+Lag 5 year(s): R = 0.926
+
+Strongest correlation at 5 year lag: R = 0.926
+
+Analyzing Sudan...
+Lag 1 year(s): R = 0.277
+Lag 2 year(s): R = 0.266
+Lag 3 year(s): R = 0.219
+Lag 4 year(s): R = 0.166
+Lag 5 year(s): R = 0.089
+
+Strongest correlation at 1 year lag: R = 0.277
+
+Analyzing Syria...
+Lag 1 year(s): R = 0.348
+Lag 2 year(s): R = 0.356
+Lag 3 year(s): R = 0.352
+Lag 4 year(s): R = 0.386
+Lag 5 year(s): R = 0.440
+
+Strongest correlation at 5 year lag: R = 0.440
+
+Analyzing Thailand...
+Lag 1 year(s): R = 0.492
+Lag 2 year(s): R = 0.523
+Lag 3 year(s): R = 0.577
+Lag 4 year(s): R = 0.631
+Lag 5 year(s): R = 0.683
+
+Strongest correlation at 5 year lag: R = 0.683
+
+Analyzing United Arab Emirates...
+Lag 1 year(s): R = 0.827
+Lag 2 year(s): R = 0.797
+Lag 3 year(s): R = 0.767
+Lag 4 year(s): R = 0.745
+Lag 5 year(s): R = 0.721
+
+Strongest correlation at 1 year lag: R = 0.827
+
+Analyzing Uzbekistan...
+Lag 1 year(s): R = -0.063
+Lag 2 year(s): R = 0.055
+Lag 3 year(s): R = 0.183
+Lag 4 year(s): R = 0.270
+Lag 5 year(s): R = 0.338
+
+Strongest correlation at 5 year lag: R = 0.338
+
+Analyzing Yemen...
+Lag 1 year(s): R = 0.781
+Lag 2 year(s): R = 0.737
+Lag 3 year(s): R = 0.688
+Lag 4 year(s): R = 0.651
+Lag 5 year(s): R = 0.615
+
+Strongest correlation at 1 year lag: R = 0.781
+
+Analyzing Afghanistan...
+Lag 1 year(s): R = 0.632
+Lag 2 year(s): R = 0.607
+Lag 3 year(s): R = 0.561
+Lag 4 year(s): R = 0.506
+Lag 5 year(s): R = 0.453
+
+Strongest correlation at 1 year lag: R = 0.632
+
+Analyzing Algeria...
+Lag 1 year(s): R = 0.689
+Lag 2 year(s): R = 0.636
+Lag 3 year(s): R = 0.609
+Lag 4 year(s): R = 0.598
+Lag 5 year(s): R = 0.566
+
+Strongest correlation at 1 year lag: R = 0.689
+
+Analyzing Angola...
+Lag 1 year(s): R = 0.506
+Lag 2 year(s): R = 0.510
+Lag 3 year(s): R = 0.513
+Lag 4 year(s): R = 0.518
+Lag 5 year(s): R = 0.518
+
+Strongest correlation at 4 year lag: R = 0.518
+
+Analyzing Azerbaijan...
+Lag 1 year(s): R = -0.509
+Lag 2 year(s): R = -0.524
+Lag 3 year(s): R = -0.525
+Lag 4 year(s): R = -0.445
+Lag 5 year(s): R = -0.382
+
+Strongest correlation at 3 year lag: R = -0.525
+
+Analyzing Bangladesh...
+Lag 1 year(s): R = 0.368
+Lag 2 year(s): R = 0.404
+Lag 3 year(s): R = 0.415
+Lag 4 year(s): R = 0.419
+Lag 5 year(s): R = 0.446
+
+Strongest correlation at 5 year lag: R = 0.446
+
+Analyzing Belarus...
+Lag 1 year(s): R = -0.819
+Lag 2 year(s): R = -0.792
+Lag 3 year(s): R = -0.759
+Lag 4 year(s): R = -0.751
+Lag 5 year(s): R = -0.771
+
+Strongest correlation at 1 year lag: R = -0.819
+
+Analyzing Benin...
+Lag 1 year(s): R = 0.375
+Lag 2 year(s): R = 0.305
+Lag 3 year(s): R = 0.224
+Lag 4 year(s): R = 0.117
+Lag 5 year(s): R = -0.003
+
+Strongest correlation at 1 year lag: R = 0.375
+
+Analyzing Bolivia...
+Lag 1 year(s): R = 0.833
+Lag 2 year(s): R = 0.834
+Lag 3 year(s): R = 0.854
+Lag 4 year(s): R = 0.862
+Lag 5 year(s): R = 0.852
+
+Strongest correlation at 4 year lag: R = 0.862
+
+Analyzing Burma/Myanmar...
+Lag 1 year(s): R = 0.192
+Lag 2 year(s): R = 0.204
+Lag 3 year(s): R = 0.215
+Lag 4 year(s): R = 0.209
+Lag 5 year(s): R = 0.182
+
+Strongest correlation at 3 year lag: R = 0.215
+
+Analyzing Burundi...
+Lag 1 year(s): R = 0.661
+Lag 2 year(s): R = 0.631
+Lag 3 year(s): R = 0.598
+Lag 4 year(s): R = 0.599
+Lag 5 year(s): R = 0.639
+
+Strongest correlation at 1 year lag: R = 0.661
+
+Analyzing Cambodia...
+Lag 1 year(s): R = 0.758
+Lag 2 year(s): R = 0.804
+Lag 3 year(s): R = 0.842
+Lag 4 year(s): R = 0.876
+Lag 5 year(s): R = 0.898
+
+Strongest correlation at 5 year lag: R = 0.898
+
+Analyzing Cameroon...
+Lag 1 year(s): R = 0.624
+Lag 2 year(s): R = 0.643
+Lag 3 year(s): R = 0.649
+Lag 4 year(s): R = 0.666
+Lag 5 year(s): R = 0.663
+
+Strongest correlation at 4 year lag: R = 0.666
+
+Analyzing Central African Republic...
+Lag 1 year(s): R = 0.810
+Lag 2 year(s): R = 0.793
+Lag 3 year(s): R = 0.744
+Lag 4 year(s): R = 0.729
+Lag 5 year(s): R = 0.683
+
+Strongest correlation at 1 year lag: R = 0.810
+
+Analyzing Chad...
+Lag 1 year(s): R = 0.790
+Lag 2 year(s): R = 0.795
+Lag 3 year(s): R = 0.779
+Lag 4 year(s): R = 0.727
+Lag 5 year(s): R = 0.639
+
+Strongest correlation at 2 year lag: R = 0.795
+
+Analyzing Comoros...
+Lag 1 year(s): R = 0.663
+Lag 2 year(s): R = 0.735
+Lag 3 year(s): R = 0.773
+Lag 4 year(s): R = 0.788
+Lag 5 year(s): R = 0.769
+
+Strongest correlation at 4 year lag: R = 0.788
+
+Analyzing Djibouti...
+Lag 1 year(s): R = 0.264
+Lag 2 year(s): R = 0.288
+Lag 3 year(s): R = 0.329
+Lag 4 year(s): R = 0.372
+Lag 5 year(s): R = 0.398
+
+Strongest correlation at 5 year lag: R = 0.398
+
+Analyzing Egypt...
+Lag 1 year(s): R = 0.378
+Lag 2 year(s): R = 0.344
+Lag 3 year(s): R = 0.117
+Lag 4 year(s): R = 0.055
+Lag 5 year(s): R = 0.258
+
+Strongest correlation at 1 year lag: R = 0.378
+
+Analyzing Equatorial Guinea...
+Lag 1 year(s): R = 0.824
+Lag 2 year(s): R = 0.826
+Lag 3 year(s): R = 0.809
+Lag 4 year(s): R = 0.780
+Lag 5 year(s): R = 0.738
+
+Strongest correlation at 2 year lag: R = 0.826
+
+Analyzing Ethiopia...
+Lag 1 year(s): R = 0.867
+Lag 2 year(s): R = 0.900
+Lag 3 year(s): R = 0.923
+Lag 4 year(s): R = 0.933
+Lag 5 year(s): R = 0.946
+
+Strongest correlation at 5 year lag: R = 0.946
+
+Analyzing Fiji...
+Lag 1 year(s): R = -0.663
+Lag 2 year(s): R = -0.667
+Lag 3 year(s): R = -0.677
+Lag 4 year(s): R = -0.666
+Lag 5 year(s): R = -0.641
+
+Strongest correlation at 3 year lag: R = -0.677
+
+Analyzing Gabon...
+Lag 1 year(s): R = 0.101
+Lag 2 year(s): R = 0.048
+Lag 3 year(s): R = 0.012
+Lag 4 year(s): R = -0.066
+Lag 5 year(s): R = -0.150
+
+Strongest correlation at 5 year lag: R = -0.150
+
+Analyzing Guinea...
+Lag 1 year(s): R = 0.689
+Lag 2 year(s): R = 0.675
+Lag 3 year(s): R = 0.676
+Lag 4 year(s): R = 0.695
+Lag 5 year(s): R = 0.727
+
+Strongest correlation at 5 year lag: R = 0.727
+
+Analyzing Haiti...
+Lag 1 year(s): R = 0.702
+Lag 2 year(s): R = 0.707
+Lag 3 year(s): R = 0.705
+Lag 4 year(s): R = 0.736
+Lag 5 year(s): R = 0.754
+
+Strongest correlation at 5 year lag: R = 0.754
+
+Analyzing Honduras...
+Lag 1 year(s): R = 0.583
+Lag 2 year(s): R = 0.636
+Lag 3 year(s): R = 0.694
+Lag 4 year(s): R = 0.739
+Lag 5 year(s): R = 0.783
+
+Strongest correlation at 5 year lag: R = 0.783
+
+Analyzing Hungary...
+Lag 1 year(s): R = 0.785
+Lag 2 year(s): R = 0.831
+Lag 3 year(s): R = 0.873
+Lag 4 year(s): R = 0.908
+Lag 5 year(s): R = 0.937
+
+Strongest correlation at 5 year lag: R = 0.937
+
+Analyzing India...
+Lag 1 year(s): R = 0.057
+Lag 2 year(s): R = 0.156
+Lag 3 year(s): R = 0.258
+Lag 4 year(s): R = 0.370
+Lag 5 year(s): R = 0.470
+
+Strongest correlation at 5 year lag: R = 0.470
+
+Analyzing Iran...
+Lag 1 year(s): R = 0.525
+Lag 2 year(s): R = 0.611
+Lag 3 year(s): R = 0.684
+Lag 4 year(s): R = 0.738
+Lag 5 year(s): R = 0.771
+
+Strongest correlation at 5 year lag: R = 0.771
+
+Analyzing Iraq...
+Lag 1 year(s): R = -0.449
+Lag 2 year(s): R = -0.473
+Lag 3 year(s): R = -0.478
+Lag 4 year(s): R = -0.502
+Lag 5 year(s): R = -0.499
+
+Strongest correlation at 4 year lag: R = -0.502
+
+Analyzing Ivory Coast...
+Lag 1 year(s): R = 0.465
+Lag 2 year(s): R = 0.453
+Lag 3 year(s): R = 0.484
+Lag 4 year(s): R = 0.470
+Lag 5 year(s): R = 0.407
+
+Strongest correlation at 3 year lag: R = 0.484
+
+Analyzing Kazakhstan...
+Lag 1 year(s): R = -0.535
+Lag 2 year(s): R = -0.397
+Lag 3 year(s): R = -0.276
+Lag 4 year(s): R = -0.120
+Lag 5 year(s): R = 0.067
+
+Strongest correlation at 1 year lag: R = -0.535
+
+Analyzing Kenya...
+Lag 1 year(s): R = 0.703
+Lag 2 year(s): R = 0.661
+Lag 3 year(s): R = 0.620
+Lag 4 year(s): R = 0.589
+Lag 5 year(s): R = 0.561
+
+Strongest correlation at 1 year lag: R = 0.703
+
+Analyzing Kyrgyzstan...
+Lag 1 year(s): R = 0.332
+Lag 2 year(s): R = 0.301
+Lag 3 year(s): R = 0.308
+Lag 4 year(s): R = 0.282
+Lag 5 year(s): R = 0.208
+
+Strongest correlation at 1 year lag: R = 0.332
+
+Analyzing Lebanon...
+Lag 1 year(s): R = 0.697
+Lag 2 year(s): R = 0.649
+Lag 3 year(s): R = 0.584
+Lag 4 year(s): R = 0.500
+Lag 5 year(s): R = 0.420
+
+Strongest correlation at 1 year lag: R = 0.697
+
+Analyzing Malaysia...
+Lag 1 year(s): R = 0.664
+Lag 2 year(s): R = 0.690
+Lag 3 year(s): R = 0.731
+Lag 4 year(s): R = 0.725
+Lag 5 year(s): R = 0.722
+
+Strongest correlation at 3 year lag: R = 0.731
+
+Analyzing Mali...
+Lag 1 year(s): R = 0.797
+Lag 2 year(s): R = 0.774
+Lag 3 year(s): R = 0.737
+Lag 4 year(s): R = 0.703
+Lag 5 year(s): R = 0.685
+
+Strongest correlation at 1 year lag: R = 0.797
+
+Analyzing Mauritania...
+Lag 1 year(s): R = 0.403
+Lag 2 year(s): R = 0.406
+Lag 3 year(s): R = 0.431
+Lag 4 year(s): R = 0.451
+Lag 5 year(s): R = 0.440
+
+Strongest correlation at 4 year lag: R = 0.451
+
+Analyzing Montenegro...
+Lag 1 year(s): R = 0.537
+Lag 2 year(s): R = 0.660
+Lag 3 year(s): R = 0.750
+Lag 4 year(s): R = 0.831
+Lag 5 year(s): R = 0.896
+
+Strongest correlation at 5 year lag: R = 0.896
+
+Analyzing Mozambique...
+Lag 1 year(s): R = 0.799
+Lag 2 year(s): R = 0.830
+Lag 3 year(s): R = 0.864
+Lag 4 year(s): R = 0.891
+Lag 5 year(s): R = 0.915
+
+Strongest correlation at 5 year lag: R = 0.915
+
+Analyzing Nicaragua...
+Lag 1 year(s): R = 0.346
+Lag 2 year(s): R = 0.416
+Lag 3 year(s): R = 0.503
+Lag 4 year(s): R = 0.551
+Lag 5 year(s): R = 0.615
+
+Strongest correlation at 5 year lag: R = 0.615
+
+Analyzing Pakistan...
+Lag 1 year(s): R = 0.727
+Lag 2 year(s): R = 0.703
+Lag 3 year(s): R = 0.664
+Lag 4 year(s): R = 0.607
+Lag 5 year(s): R = 0.541
+
+Strongest correlation at 1 year lag: R = 0.727
+
+Analyzing Papua New Guinea...
+Lag 1 year(s): R = -0.681
+Lag 2 year(s): R = -0.598
+Lag 3 year(s): R = -0.224
+Lag 4 year(s): R = 0.071
+Lag 5 year(s): R = 0.212
+
+Strongest correlation at 1 year lag: R = -0.681
+
+Analyzing Philippines...
+Lag 1 year(s): R = 0.819
+Lag 2 year(s): R = 0.841
+Lag 3 year(s): R = 0.861
+Lag 4 year(s): R = 0.887
+Lag 5 year(s): R = 0.905
+
+Strongest correlation at 5 year lag: R = 0.905
+
+Analyzing Republic of the Congo...
+Lag 1 year(s): R = 0.670
+Lag 2 year(s): R = 0.727
+Lag 3 year(s): R = 0.732
+Lag 4 year(s): R = 0.688
+Lag 5 year(s): R = 0.630
+
+Strongest correlation at 3 year lag: R = 0.732
+
+Analyzing Russia...
+Lag 1 year(s): R = -0.006
+Lag 2 year(s): R = 0.238
+Lag 3 year(s): R = 0.433
+Lag 4 year(s): R = 0.582
+Lag 5 year(s): R = 0.671
+
+Strongest correlation at 5 year lag: R = 0.671
+
+Analyzing Rwanda...
+Lag 1 year(s): R = 0.313
+Lag 2 year(s): R = 0.361
+Lag 3 year(s): R = 0.371
+Lag 4 year(s): R = 0.354
+Lag 5 year(s): R = 0.325
+
+Strongest correlation at 3 year lag: R = 0.371
+
+Analyzing Serbia...
+Lag 1 year(s): R = 0.765
+Lag 2 year(s): R = 0.808
+Lag 3 year(s): R = 0.856
+Lag 4 year(s): R = 0.895
+Lag 5 year(s): R = 0.922
+
+Strongest correlation at 5 year lag: R = 0.922
+
+Analyzing Singapore...
+Lag 1 year(s): R = 0.910
+Lag 2 year(s): R = 0.905
+Lag 3 year(s): R = 0.901
+Lag 4 year(s): R = 0.903
+Lag 5 year(s): R = 0.914
+
+Strongest correlation at 5 year lag: R = 0.914
+
+Analyzing Tajikistan...
+Lag 1 year(s): R = -0.411
+Lag 2 year(s): R = -0.270
+Lag 3 year(s): R = -0.107
+Lag 4 year(s): R = 0.050
+Lag 5 year(s): R = 0.095
+
+Strongest correlation at 1 year lag: R = -0.411
+
+Analyzing Tanzania...
+Lag 1 year(s): R = 0.852
+Lag 2 year(s): R = 0.841
+Lag 3 year(s): R = 0.834
+Lag 4 year(s): R = 0.822
+Lag 5 year(s): R = 0.819
+
+Strongest correlation at 1 year lag: R = 0.852
+
+Analyzing The Gambia...
+Lag 1 year(s): R = -0.316
+Lag 2 year(s): R = -0.403
+Lag 3 year(s): R = -0.471
+Lag 4 year(s): R = -0.498
+Lag 5 year(s): R = -0.508
+
+Strongest correlation at 5 year lag: R = -0.508
+
+Analyzing Togo...
+Lag 1 year(s): R = 0.693
+Lag 2 year(s): R = 0.677
+Lag 3 year(s): R = 0.653
+Lag 4 year(s): R = 0.610
+Lag 5 year(s): R = 0.555
+
+Strongest correlation at 1 year lag: R = 0.693
+
+Analyzing Turkmenistan...
+Lag 1 year(s): R = -0.454
+Lag 2 year(s): R = -0.295
+Lag 3 year(s): R = -0.104
+Lag 4 year(s): R = -0.017
+Lag 5 year(s): R = 0.036
+
+Strongest correlation at 1 year lag: R = -0.454
+
+Analyzing Türkiye...
+Lag 1 year(s): R = 0.109
+Lag 2 year(s): R = 0.137
+Lag 3 year(s): R = 0.169
+Lag 4 year(s): R = 0.215
+Lag 5 year(s): R = 0.252
+
+Strongest correlation at 5 year lag: R = 0.252
+
+Analyzing Uganda...
+Lag 1 year(s): R = 0.807
+Lag 2 year(s): R = 0.818
+Lag 3 year(s): R = 0.825
+Lag 4 year(s): R = 0.827
+Lag 5 year(s): R = 0.836
+
+Strongest correlation at 5 year lag: R = 0.836
+
+Analyzing Venezuela...
+Lag 1 year(s): R = 0.779
+Lag 2 year(s): R = 0.815
+Lag 3 year(s): R = 0.844
+Lag 4 year(s): R = 0.861
+Lag 5 year(s): R = 0.877
+
+Strongest correlation at 5 year lag: R = 0.877
+
+Analyzing Vietnam...
+Lag 1 year(s): R = -0.482
+Lag 2 year(s): R = -0.577
+Lag 3 year(s): R = -0.600
+Lag 4 year(s): R = -0.607
+Lag 5 year(s): R = -0.617
+
+Strongest correlation at 5 year lag: R = -0.617
+
+Analyzing Zambia...
+Lag 1 year(s): R = 0.750
+Lag 2 year(s): R = 0.800
+Lag 3 year(s): R = 0.845
+Lag 4 year(s): R = 0.897
+Lag 5 year(s): R = 0.907
+
+Strongest correlation at 5 year lag: R = 0.907
+
+Analyzing Zimbabwe...
+Lag 1 year(s): R = -0.074
+Lag 2 year(s): R = 0.166
+Lag 3 year(s): R = 0.249
+Lag 4 year(s): R = 0.333
+Lag 5 year(s): R = 0.369
+
+Strongest correlation at 5 year lag: R = 0.369
+
+Analyzing Albania...
+Lag 1 year(s): R = 0.926
+Lag 2 year(s): R = 0.916
+Lag 3 year(s): R = 0.906
+Lag 4 year(s): R = 0.910
+Lag 5 year(s): R = 0.916
+
+Strongest correlation at 1 year lag: R = 0.926
+
+Analyzing Argentina...
+Lag 1 year(s): R = 0.507
+Lag 2 year(s): R = 0.533
+Lag 3 year(s): R = 0.569
+Lag 4 year(s): R = 0.622
+Lag 5 year(s): R = 0.658
+
+Strongest correlation at 5 year lag: R = 0.658
+
+Analyzing Armenia...
+Lag 1 year(s): R = -0.662
+Lag 2 year(s): R = -0.838
+Lag 3 year(s): R = -0.829
+Lag 4 year(s): R = -0.778
+Lag 5 year(s): R = -0.804
+
+Strongest correlation at 2 year lag: R = -0.838
+
+Analyzing Bhutan...
+Lag 1 year(s): R = 0.917
+Lag 2 year(s): R = 0.901
+Lag 3 year(s): R = 0.871
+Lag 4 year(s): R = 0.827
+Lag 5 year(s): R = 0.774
+
+Strongest correlation at 1 year lag: R = 0.917
+
+Analyzing Bosnia and Herzegovina...
+Lag 1 year(s): R = 0.527
+Lag 2 year(s): R = 0.558
+Lag 3 year(s): R = 0.620
+Lag 4 year(s): R = 0.716
+Lag 5 year(s): R = 0.774
+
+Strongest correlation at 5 year lag: R = 0.774
+
+Analyzing Brazil...
+Lag 1 year(s): R = 0.646
+Lag 2 year(s): R = 0.675
+Lag 3 year(s): R = 0.705
+Lag 4 year(s): R = 0.739
+Lag 5 year(s): R = 0.775
+
+Strongest correlation at 5 year lag: R = 0.775
+
+Analyzing Bulgaria...
+Lag 1 year(s): R = 0.778
+Lag 2 year(s): R = 0.819
+Lag 3 year(s): R = 0.844
+Lag 4 year(s): R = 0.872
+Lag 5 year(s): R = 0.887
+
+Strongest correlation at 5 year lag: R = 0.887
+
+Analyzing Burkina Faso...
+Lag 1 year(s): R = 0.584
+Lag 2 year(s): R = 0.560
+Lag 3 year(s): R = 0.515
+Lag 4 year(s): R = 0.471
+Lag 5 year(s): R = 0.468
+
+Strongest correlation at 1 year lag: R = 0.584
+
+Analyzing Canada...
+Lag 1 year(s): R = 0.231
+Lag 2 year(s): R = 0.194
+Lag 3 year(s): R = 0.174
+Lag 4 year(s): R = 0.151
+Lag 5 year(s): R = 0.141
+
+Strongest correlation at 1 year lag: R = 0.231
+
+Analyzing Cape Verde...
+Lag 1 year(s): R = 0.753
+Lag 2 year(s): R = 0.776
+Lag 3 year(s): R = 0.813
+Lag 4 year(s): R = 0.831
+Lag 5 year(s): R = 0.844
+
+Strongest correlation at 5 year lag: R = 0.844
+
+Analyzing Chile...
+Lag 1 year(s): R = 0.640
+Lag 2 year(s): R = 0.664
+Lag 3 year(s): R = 0.709
+Lag 4 year(s): R = 0.759
+Lag 5 year(s): R = 0.794
+
+Strongest correlation at 5 year lag: R = 0.794
+
+Analyzing Colombia...
+Lag 1 year(s): R = 0.912
+Lag 2 year(s): R = 0.909
+Lag 3 year(s): R = 0.912
+Lag 4 year(s): R = 0.917
+Lag 5 year(s): R = 0.917
+
+Strongest correlation at 5 year lag: R = 0.917
+
+Analyzing Croatia...
+Lag 1 year(s): R = 0.886
+Lag 2 year(s): R = 0.909
+Lag 3 year(s): R = 0.938
+Lag 4 year(s): R = 0.956
+Lag 5 year(s): R = 0.939
+
+Strongest correlation at 4 year lag: R = 0.956
+
+Analyzing Czechia...
+Lag 1 year(s): R = -0.494
+Lag 2 year(s): R = -0.443
+Lag 3 year(s): R = 0.045
+Lag 4 year(s): R = 0.444
+Lag 5 year(s): R = 0.610
+
+Strongest correlation at 5 year lag: R = 0.610
+
+Analyzing Dominican Republic...
+Lag 1 year(s): R = 0.799
+Lag 2 year(s): R = 0.828
+Lag 3 year(s): R = 0.853
+Lag 4 year(s): R = 0.877
+Lag 5 year(s): R = 0.903
+
+Strongest correlation at 5 year lag: R = 0.903
+
+Analyzing Ecuador...
+Lag 1 year(s): R = 0.650
+Lag 2 year(s): R = 0.664
+Lag 3 year(s): R = 0.691
+Lag 4 year(s): R = 0.723
+Lag 5 year(s): R = 0.741
+
+Strongest correlation at 5 year lag: R = 0.741
+
+Analyzing El Salvador...
+Lag 1 year(s): R = 0.932
+Lag 2 year(s): R = 0.948
+Lag 3 year(s): R = 0.958
+Lag 4 year(s): R = 0.962
+Lag 5 year(s): R = 0.957
+
+Strongest correlation at 4 year lag: R = 0.962
+
+Analyzing Georgia...
+Lag 1 year(s): R = 0.902
+Lag 2 year(s): R = 0.899
+Lag 3 year(s): R = 0.888
+Lag 4 year(s): R = 0.858
+Lag 5 year(s): R = 0.830
+
+Strongest correlation at 1 year lag: R = 0.902
+
+Analyzing Ghana...
+Lag 1 year(s): R = 0.885
+Lag 2 year(s): R = 0.858
+Lag 3 year(s): R = 0.829
+Lag 4 year(s): R = 0.797
+Lag 5 year(s): R = 0.775
+
+Strongest correlation at 1 year lag: R = 0.885
+
+Analyzing Guatemala...
+Lag 1 year(s): R = 0.887
+Lag 2 year(s): R = 0.905
+Lag 3 year(s): R = 0.921
+Lag 4 year(s): R = 0.926
+Lag 5 year(s): R = 0.928
+
+Strongest correlation at 5 year lag: R = 0.928
+
+Analyzing Guinea-Bissau...
+Lag 1 year(s): R = 0.796
+Lag 2 year(s): R = 0.795
+Lag 3 year(s): R = 0.818
+Lag 4 year(s): R = 0.839
+Lag 5 year(s): R = 0.826
+
+Strongest correlation at 4 year lag: R = 0.839
+
+Analyzing Guyana...
+Lag 1 year(s): R = 0.412
+Lag 2 year(s): R = 0.350
+Lag 3 year(s): R = 0.288
+Lag 4 year(s): R = 0.215
+Lag 5 year(s): R = 0.128
+
+Strongest correlation at 1 year lag: R = 0.412
+
+Analyzing Indonesia...
+Lag 1 year(s): R = 0.584
+Lag 2 year(s): R = 0.494
+Lag 3 year(s): R = 0.416
+Lag 4 year(s): R = 0.370
+Lag 5 year(s): R = 0.330
+
+Strongest correlation at 1 year lag: R = 0.584
+
+Analyzing Jamaica...
+Lag 1 year(s): R = 0.871
+Lag 2 year(s): R = 0.848
+Lag 3 year(s): R = 0.824
+Lag 4 year(s): R = 0.803
+Lag 5 year(s): R = 0.785
+
+Strongest correlation at 1 year lag: R = 0.871
+
+Analyzing Lesotho...
+Lag 1 year(s): R = 0.703
+Lag 2 year(s): R = 0.666
+Lag 3 year(s): R = 0.621
+Lag 4 year(s): R = 0.600
+Lag 5 year(s): R = 0.574
+
+Strongest correlation at 1 year lag: R = 0.703
+
+Analyzing Liberia...
+Lag 1 year(s): R = 0.406
+Lag 2 year(s): R = 0.356
+Lag 3 year(s): R = 0.293
+Lag 4 year(s): R = 0.230
+Lag 5 year(s): R = 0.177
+
+Strongest correlation at 1 year lag: R = 0.406
+
+Analyzing Lithuania...
+Lag 1 year(s): R = 0.444
+Lag 2 year(s): R = 0.491
+Lag 3 year(s): R = 0.572
+Lag 4 year(s): R = 0.700
+Lag 5 year(s): R = 0.681
+
+Strongest correlation at 4 year lag: R = 0.700
+
+Analyzing Madagascar...
+Lag 1 year(s): R = 0.639
+Lag 2 year(s): R = 0.634
+Lag 3 year(s): R = 0.647
+Lag 4 year(s): R = 0.677
+Lag 5 year(s): R = 0.697
+
+Strongest correlation at 5 year lag: R = 0.697
+
+Analyzing Malawi...
+Lag 1 year(s): R = 0.376
+Lag 2 year(s): R = 0.407
+Lag 3 year(s): R = 0.481
+Lag 4 year(s): R = 0.551
+Lag 5 year(s): R = 0.561
+
+Strongest correlation at 5 year lag: R = 0.561
+
+Analyzing Maldives...
+Lag 1 year(s): R = 0.691
+Lag 2 year(s): R = 0.668
+Lag 3 year(s): R = 0.644
+Lag 4 year(s): R = 0.624
+Lag 5 year(s): R = 0.612
+
+Strongest correlation at 1 year lag: R = 0.691
+
+Analyzing Malta...
+Lag 1 year(s): R = 0.758
+Lag 2 year(s): R = 0.789
+Lag 3 year(s): R = 0.817
+Lag 4 year(s): R = 0.841
+Lag 5 year(s): R = 0.864
+
+Strongest correlation at 5 year lag: R = 0.864
+
+Analyzing Mauritius...
+Lag 1 year(s): R = 0.744
+Lag 2 year(s): R = 0.783
+Lag 3 year(s): R = 0.793
+Lag 4 year(s): R = 0.806
+Lag 5 year(s): R = 0.817
+
+Strongest correlation at 5 year lag: R = 0.817
+
+Analyzing Mexico...
+Lag 1 year(s): R = 0.869
+Lag 2 year(s): R = 0.880
+Lag 3 year(s): R = 0.893
+Lag 4 year(s): R = 0.909
+Lag 5 year(s): R = 0.923
+
+Strongest correlation at 5 year lag: R = 0.923
+
+Analyzing Moldova...
+Lag 1 year(s): R = 0.249
+Lag 2 year(s): R = 0.292
+Lag 3 year(s): R = 0.328
+Lag 4 year(s): R = 0.333
+Lag 5 year(s): R = 0.270
+
+Strongest correlation at 4 year lag: R = 0.333
+
+Analyzing Mongolia...
+Lag 1 year(s): R = 0.886
+Lag 2 year(s): R = 0.913
+Lag 3 year(s): R = 0.932
+Lag 4 year(s): R = 0.943
+Lag 5 year(s): R = 0.951
+
+Strongest correlation at 5 year lag: R = 0.951
+
+Analyzing Namibia...
+Lag 1 year(s): R = 0.617
+Lag 2 year(s): R = 0.716
+Lag 3 year(s): R = 0.824
+Lag 4 year(s): R = 0.815
+Lag 5 year(s): R = 0.800
+
+Strongest correlation at 3 year lag: R = 0.824
+
+Analyzing Nepal...
+Lag 1 year(s): R = 0.854
+Lag 2 year(s): R = 0.830
+Lag 3 year(s): R = 0.791
+Lag 4 year(s): R = 0.758
+Lag 5 year(s): R = 0.722
+
+Strongest correlation at 1 year lag: R = 0.854
+
+Analyzing Niger...
+Lag 1 year(s): R = 0.592
+Lag 2 year(s): R = 0.594
+Lag 3 year(s): R = 0.592
+Lag 4 year(s): R = 0.579
+Lag 5 year(s): R = 0.551
+
+Strongest correlation at 2 year lag: R = 0.594
+
+Analyzing Nigeria...
+Lag 1 year(s): R = 0.575
+Lag 2 year(s): R = 0.500
+Lag 3 year(s): R = 0.461
+Lag 4 year(s): R = 0.457
+Lag 5 year(s): R = 0.475
+
+Strongest correlation at 1 year lag: R = 0.575
+
+Analyzing North Macedonia...
+Lag 1 year(s): R = 0.686
+Lag 2 year(s): R = 0.711
+Lag 3 year(s): R = 0.721
+Lag 4 year(s): R = 0.715
+Lag 5 year(s): R = 0.727
+
+Strongest correlation at 5 year lag: R = 0.727
+
+Analyzing Panama...
+Lag 1 year(s): R = 0.815
+Lag 2 year(s): R = 0.831
+Lag 3 year(s): R = 0.850
+Lag 4 year(s): R = 0.869
+Lag 5 year(s): R = 0.887
+
+Strongest correlation at 5 year lag: R = 0.887
+
+Analyzing Paraguay...
+Lag 1 year(s): R = 0.959
+Lag 2 year(s): R = 0.969
+Lag 3 year(s): R = 0.971
+Lag 4 year(s): R = 0.969
+Lag 5 year(s): R = 0.961
+
+Strongest correlation at 3 year lag: R = 0.971
+
+Analyzing Peru...
+Lag 1 year(s): R = 0.683
+Lag 2 year(s): R = 0.666
+Lag 3 year(s): R = 0.639
+Lag 4 year(s): R = 0.625
+Lag 5 year(s): R = 0.596
+
+Strongest correlation at 1 year lag: R = 0.683
+
+Analyzing Poland...
+Lag 1 year(s): R = 0.641
+Lag 2 year(s): R = 0.686
+Lag 3 year(s): R = 0.729
+Lag 4 year(s): R = 0.767
+Lag 5 year(s): R = 0.798
+
+Strongest correlation at 5 year lag: R = 0.798
+
+Analyzing Sao Tome and Principe...
+Lag 1 year(s): R = 0.830
+Lag 2 year(s): R = 0.858
+Lag 3 year(s): R = 0.871
+Lag 4 year(s): R = 0.872
+Lag 5 year(s): R = 0.872
+
+Strongest correlation at 4 year lag: R = 0.872
+
+Analyzing Senegal...
+Lag 1 year(s): R = 0.887
+Lag 2 year(s): R = 0.872
+Lag 3 year(s): R = 0.848
+Lag 4 year(s): R = 0.844
+Lag 5 year(s): R = 0.841
+
+Strongest correlation at 1 year lag: R = 0.887
+
+Analyzing Sierra Leone...
+Lag 1 year(s): R = 0.568
+Lag 2 year(s): R = 0.599
+Lag 3 year(s): R = 0.608
+Lag 4 year(s): R = 0.606
+Lag 5 year(s): R = 0.588
+
+Strongest correlation at 3 year lag: R = 0.608
+
+Analyzing Slovakia...
+Lag 1 year(s): R = 0.772
+Lag 2 year(s): R = 0.820
+Lag 3 year(s): R = 0.860
+Lag 4 year(s): R = 0.916
+Lag 5 year(s): R = 0.956
+
+Strongest correlation at 5 year lag: R = 0.956
+
+Analyzing Solomon Islands...
+Lag 1 year(s): R = 0.455
+Lag 2 year(s): R = 0.359
+Lag 3 year(s): R = 0.267
+Lag 4 year(s): R = 0.242
+Lag 5 year(s): R = 0.155
+
+Strongest correlation at 1 year lag: R = 0.455
+
+Analyzing South Africa...
+Lag 1 year(s): R = 0.897
+Lag 2 year(s): R = 0.925
+Lag 3 year(s): R = 0.949
+Lag 4 year(s): R = 0.961
+Lag 5 year(s): R = 0.963
+
+Strongest correlation at 5 year lag: R = 0.963
+
+Analyzing Sri Lanka...
+Lag 1 year(s): R = -0.556
+Lag 2 year(s): R = -0.518
+Lag 3 year(s): R = -0.477
+Lag 4 year(s): R = -0.441
+Lag 5 year(s): R = -0.415
+
+Strongest correlation at 1 year lag: R = -0.556
+
+Analyzing Suriname...
+Lag 1 year(s): R = 0.456
+Lag 2 year(s): R = 0.492
+Lag 3 year(s): R = 0.485
+Lag 4 year(s): R = 0.432
+Lag 5 year(s): R = 0.358
+
+Strongest correlation at 2 year lag: R = 0.492
+
+Analyzing Tunisia...
+Lag 1 year(s): R = 0.289
+Lag 2 year(s): R = 0.274
+Lag 3 year(s): R = 0.236
+Lag 4 year(s): R = 0.247
+Lag 5 year(s): R = 0.279
+
+Strongest correlation at 1 year lag: R = 0.289
+
+Analyzing Ukraine...
+Lag 1 year(s): R = -0.014
+Lag 2 year(s): R = 0.052
+Lag 3 year(s): R = 0.151
+Lag 4 year(s): R = 0.218
+Lag 5 year(s): R = 0.224
+
+Strongest correlation at 5 year lag: R = 0.224
+
+Analyzing Vanuatu...
+Lag 1 year(s): R = 0.390
+Lag 2 year(s): R = 0.362
+Lag 3 year(s): R = 0.355
+Lag 4 year(s): R = 0.357
+Lag 5 year(s): R = 0.385
+
+Strongest correlation at 1 year lag: R = 0.390
+
+Analyzing Australia...
+Lag 1 year(s): R = 0.236
+Lag 2 year(s): R = 0.385
+Lag 3 year(s): R = 0.455
+Lag 4 year(s): R = 0.514
+Lag 5 year(s): R = 0.563
+
+Strongest correlation at 5 year lag: R = 0.563
+
+Analyzing Austria...
+Lag 1 year(s): R = 0.703
+Lag 2 year(s): R = 0.696
+Lag 3 year(s): R = 0.707
+Lag 4 year(s): R = 0.743
+Lag 5 year(s): R = 0.787
+
+Strongest correlation at 5 year lag: R = 0.787
+
+Analyzing Barbados...
+Lag 1 year(s): R = 0.815
+Lag 2 year(s): R = 0.866
+Lag 3 year(s): R = 0.889
+Lag 4 year(s): R = 0.906
+Lag 5 year(s): R = 0.887
+
+Strongest correlation at 4 year lag: R = 0.906
+
+Analyzing Belgium...
+Lag 1 year(s): R = 0.888
+Lag 2 year(s): R = 0.877
+Lag 3 year(s): R = 0.865
+Lag 4 year(s): R = 0.862
+Lag 5 year(s): R = 0.859
+
+Strongest correlation at 1 year lag: R = 0.888
+
+Analyzing Botswana...
+Lag 1 year(s): R = 0.669
+Lag 2 year(s): R = 0.705
+Lag 3 year(s): R = 0.718
+Lag 4 year(s): R = 0.719
+Lag 5 year(s): R = 0.729
+
+Strongest correlation at 5 year lag: R = 0.729
+
+Analyzing Costa Rica...
+Lag 1 year(s): R = 0.711
+Lag 2 year(s): R = 0.714
+Lag 3 year(s): R = 0.721
+Lag 4 year(s): R = 0.728
+Lag 5 year(s): R = 0.736
+
+Strongest correlation at 5 year lag: R = 0.736
+
+Analyzing Cyprus...
+Lag 1 year(s): R = 0.708
+Lag 2 year(s): R = 0.720
+Lag 3 year(s): R = 0.735
+Lag 4 year(s): R = 0.747
+Lag 5 year(s): R = 0.757
+
+Strongest correlation at 5 year lag: R = 0.757
+
+Analyzing Denmark...
+Lag 1 year(s): R = 0.638
+Lag 2 year(s): R = 0.610
+Lag 3 year(s): R = 0.581
+Lag 4 year(s): R = 0.561
+Lag 5 year(s): R = 0.540
+
+Strongest correlation at 1 year lag: R = 0.638
+
+Analyzing Estonia...
+Lag 1 year(s): R = 0.709
+Lag 2 year(s): R = 0.687
+Lag 3 year(s): R = 0.667
+Lag 4 year(s): R = 0.691
+Lag 5 year(s): R = 0.509
+
+Strongest correlation at 1 year lag: R = 0.709
+
+Analyzing Finland...
+Lag 1 year(s): R = 0.957
+Lag 2 year(s): R = 0.960
+Lag 3 year(s): R = 0.962
+Lag 4 year(s): R = 0.962
+Lag 5 year(s): R = 0.966
+
+Strongest correlation at 5 year lag: R = 0.966
+
+Analyzing France...
+Lag 1 year(s): R = 0.889
+Lag 2 year(s): R = 0.910
+Lag 3 year(s): R = 0.913
+Lag 4 year(s): R = 0.906
+Lag 5 year(s): R = 0.904
+
+Strongest correlation at 3 year lag: R = 0.913
+
+Analyzing Germany...
+Lag 1 year(s): R = 0.824
+Lag 2 year(s): R = 0.841
+Lag 3 year(s): R = 0.867
+Lag 4 year(s): R = 0.885
+Lag 5 year(s): R = 0.908
+
+Strongest correlation at 5 year lag: R = 0.908
+
+Analyzing Greece...
+Lag 1 year(s): R = 0.587
+Lag 2 year(s): R = 0.585
+Lag 3 year(s): R = 0.586
+Lag 4 year(s): R = 0.588
+Lag 5 year(s): R = 0.593
+
+Strongest correlation at 5 year lag: R = 0.593
+
+Analyzing Iceland...
+Lag 1 year(s): R = 0.820
+Lag 2 year(s): R = 0.846
+Lag 3 year(s): R = 0.869
+Lag 4 year(s): R = 0.894
+Lag 5 year(s): R = 0.910
+
+Strongest correlation at 5 year lag: R = 0.910
+
+Analyzing Ireland...
+Lag 1 year(s): R = 0.940
+Lag 2 year(s): R = 0.943
+Lag 3 year(s): R = 0.942
+Lag 4 year(s): R = 0.931
+Lag 5 year(s): R = 0.915
+
+Strongest correlation at 2 year lag: R = 0.943
+
+Analyzing Israel...
+Lag 1 year(s): R = 0.112
+Lag 2 year(s): R = 0.188
+Lag 3 year(s): R = 0.272
+Lag 4 year(s): R = 0.332
+Lag 5 year(s): R = 0.317
+
+Strongest correlation at 4 year lag: R = 0.332
+
+Analyzing Italy...
+Lag 1 year(s): R = 0.904
+Lag 2 year(s): R = 0.909
+Lag 3 year(s): R = 0.908
+Lag 4 year(s): R = 0.910
+Lag 5 year(s): R = 0.908
+
+Strongest correlation at 4 year lag: R = 0.910
+
+Analyzing Japan...
+Lag 1 year(s): R = -0.195
+Lag 2 year(s): R = -0.173
+Lag 3 year(s): R = -0.132
+Lag 4 year(s): R = -0.006
+Lag 5 year(s): R = 0.134
+
+Strongest correlation at 1 year lag: R = -0.195
+
+Analyzing Latvia...
+Lag 1 year(s): R = 0.776
+Lag 2 year(s): R = 0.777
+Lag 3 year(s): R = 0.795
+Lag 4 year(s): R = 0.791
+Lag 5 year(s): R = 0.732
+
+Strongest correlation at 3 year lag: R = 0.795
+
+Analyzing Luxembourg...
+Lag 1 year(s): R = 0.353
+Lag 2 year(s): R = 0.321
+Lag 3 year(s): R = 0.287
+Lag 4 year(s): R = 0.259
+Lag 5 year(s): R = 0.218
+
+Strongest correlation at 1 year lag: R = 0.353
+
+Analyzing Netherlands...
+Lag 1 year(s): R = 0.754
+Lag 2 year(s): R = 0.750
+Lag 3 year(s): R = 0.726
+Lag 4 year(s): R = 0.726
+Lag 5 year(s): R = 0.710
+
+Strongest correlation at 1 year lag: R = 0.754
+
+Analyzing New Zealand...
+Lag 1 year(s): R = 0.899
+Lag 2 year(s): R = 0.886
+Lag 3 year(s): R = 0.866
+Lag 4 year(s): R = 0.843
+Lag 5 year(s): R = 0.827
+
+Strongest correlation at 1 year lag: R = 0.899
+
+Analyzing Norway...
+Lag 1 year(s): R = 0.916
+Lag 2 year(s): R = 0.912
+Lag 3 year(s): R = 0.932
+Lag 4 year(s): R = 0.940
+Lag 5 year(s): R = 0.938
+
+Strongest correlation at 4 year lag: R = 0.940
+
+Analyzing Portugal...
+Lag 1 year(s): R = 0.682
+Lag 2 year(s): R = 0.708
+Lag 3 year(s): R = 0.730
+Lag 4 year(s): R = 0.747
+Lag 5 year(s): R = 0.757
+
+Strongest correlation at 5 year lag: R = 0.757
+
+Analyzing Seychelles...
+Lag 1 year(s): R = 0.895
+Lag 2 year(s): R = 0.918
+Lag 3 year(s): R = 0.930
+Lag 4 year(s): R = 0.934
+Lag 5 year(s): R = 0.930
+
+Strongest correlation at 4 year lag: R = 0.934
+
+Analyzing Slovenia...
+Lag 1 year(s): R = 0.399
+Lag 2 year(s): R = 0.528
+Lag 3 year(s): R = 0.558
+Lag 4 year(s): R = 0.524
+Lag 5 year(s): R = 0.553
+
+Strongest correlation at 3 year lag: R = 0.558
+
+Analyzing South Korea...
+Lag 1 year(s): R = 0.728
+Lag 2 year(s): R = 0.741
+Lag 3 year(s): R = 0.755
+Lag 4 year(s): R = 0.774
+Lag 5 year(s): R = 0.806
+
+Strongest correlation at 5 year lag: R = 0.806
+
+Analyzing Spain...
+Lag 1 year(s): R = 0.641
+Lag 2 year(s): R = 0.663
+Lag 3 year(s): R = 0.683
+Lag 4 year(s): R = 0.696
+Lag 5 year(s): R = 0.699
+
+Strongest correlation at 5 year lag: R = 0.699
+
+Analyzing Sweden...
+Lag 1 year(s): R = 0.425
+Lag 2 year(s): R = 0.453
+Lag 3 year(s): R = 0.456
+Lag 4 year(s): R = 0.445
+Lag 5 year(s): R = 0.474
+
+Strongest correlation at 5 year lag: R = 0.474
+
+Analyzing Switzerland...
+Lag 1 year(s): R = 0.562
+Lag 2 year(s): R = 0.560
+Lag 3 year(s): R = 0.545
+Lag 4 year(s): R = 0.554
+Lag 5 year(s): R = 0.568
+
+Strongest correlation at 5 year lag: R = 0.568
+
+Analyzing Trinidad and Tobago...
+Lag 1 year(s): R = 0.566
+Lag 2 year(s): R = 0.614
+Lag 3 year(s): R = 0.649
+Lag 4 year(s): R = 0.670
+Lag 5 year(s): R = 0.687
+
+Strongest correlation at 5 year lag: R = 0.687
+
+Analyzing United Kingdom...
+Lag 1 year(s): R = 0.663
+Lag 2 year(s): R = 0.668
+Lag 3 year(s): R = 0.674
+Lag 4 year(s): R = 0.675
+Lag 5 year(s): R = 0.670
+
+Strongest correlation at 4 year lag: R = 0.675
+
+Analyzing United States of America...
+Lag 1 year(s): R = 0.680
+Lag 2 year(s): R = 0.724
+Lag 3 year(s): R = 0.766
+Lag 4 year(s): R = 0.805
+Lag 5 year(s): R = 0.814
+
+Strongest correlation at 5 year lag: R = 0.814
+
+Analyzing Uruguay...
+Lag 1 year(s): R = 0.687
+Lag 2 year(s): R = 0.655
+Lag 3 year(s): R = 0.641
+Lag 4 year(s): R = 0.646
+Lag 5 year(s): R = 0.649
+
+Strongest correlation at 1 year lag: R = 0.687
+
+=== Top 10 Instances of Democracy-Led Trade Growth ===
+====================================================
+
+Country              Year     Dem Growth Trade Growth      Lag  Correlation
+---------------------------------------------------------------------------
+Czechia              1990          0.654        2.288        5        0.610
+Greece               1975          0.613        1.805        5        0.593
+Chile                1990          0.590        6.362        5        0.794
+Argentina            1984          0.564        6.080        5        0.658
+Hungary              1990          0.536        4.127        5        0.937
+Estonia              1993          0.432        7.155        1        0.709
+Suriname             1988          0.429        2.403        2        0.492
+Slovenia             1990          0.378        5.814        3        0.558
+Poland               1990          0.365        0.391        5        0.798
+Suriname             1976          0.360        0.270        2        0.492

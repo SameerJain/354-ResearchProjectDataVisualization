@@ -12,7 +12,7 @@ os.makedirs('plots/individual', exist_ok=True)
 # STEP 1: Load KOF Excel
 # ---------------------------
 kof = pd.read_excel('data/KOFGI_2024_public.xlsx',
-                        usecols=['code', 'year', 'KOFTrGIdf'])
+                    usecols=['code', 'year', 'KOFEcGI'])
 kof = kof.rename(columns={'code': 'country_code'})
 kof['country_code'] = kof['country_code'].astype(str).str.strip()
 kof = kof[kof['year'].between(1970, 2020)]
@@ -21,10 +21,10 @@ kof = kof[kof['year'].between(1970, 2020)]
 # STEP 2: Load V-Dem CSV
 # ---------------------------
 vdem = pd.read_csv('data/V-Dem-CY-Core-v15.csv',
-                       usecols=[
-                           'country_text_id', 'country_name', 'year', 'v2x_regime',
-                           'v2x_polyarchy'
-                       ])
+                   usecols=[
+                       'country_text_id', 'country_name', 'year', 'v2x_regime',
+                       'v2x_polyarchy'
+                   ])
 vdem = vdem.rename(columns={'country_text_id': 'country_code'})
 vdem['country_code'] = vdem['country_code'].astype(str).str.strip()
 vdem['year'] = pd.to_numeric(vdem['year'], errors='coerce')
@@ -47,7 +47,7 @@ full_years = pd.DataFrame([(c, y) for c in all_codes
 vdem_clean = vdem[[
     'country_code', 'country_name', 'year', 'v2x_polyarchy', 'v2x_regime'
 ]]
-kof_clean = kof[['country_code', 'year', 'KOFTrGIdf']]
+kof_clean = kof[['country_code', 'year', 'KOFEcGI']]
 
 merged = full_years \
     .merge(vdem_clean, on=['country_code', 'year'], how='left') \
@@ -59,7 +59,7 @@ merged = full_years \
 # ---------------------------
 def get_status(row):
     poly = pd.notnull(row['v2x_polyarchy'])
-    kof = pd.notnull(row['KOFTrGIdf'])
+    kof = pd.notnull(row['KOFEcGI'])
     if poly and kof:
         return 'both'
     elif poly:
@@ -154,7 +154,7 @@ for code in sorted(all_codes):
 
     # Get specific years with missing data
     poly_missing_years = sub[sub['v2x_polyarchy'].isnull()]['year'].tolist()
-    kof_missing_years = sub[sub['KOFTrGIdf'].isnull()]['year'].tolist()
+    kof_missing_years = sub[sub['KOFEcGI'].isnull()]['year'].tolist()
 
     # Calculate coverage percentages
     total_years = len(sub)
@@ -232,7 +232,7 @@ for category in sorted(merged['Category'].unique()):
 # ---------------------------
 merged = merged.sort_values(by=['Category', 'country_name', 'year'])
 with pd.ExcelWriter("data/democracy_trade_analysis.xlsx",
-                        engine='xlsxwriter') as writer:
+                    engine='xlsxwriter') as writer:
     # Create formats
     header_format = writer.book.add_format({
         'bold': True,
@@ -299,21 +299,21 @@ for regime in sorted(merged['Regime_Type'].dropna().unique()):
     regime_data = merged[merged['Regime_Type'] == regime].groupby('year').agg({
         'v2x_polyarchy':
         'mean',
-        'KOFTrGIdf':
+        'KOFEcGI':
         'mean'
     }).reset_index()
     all_regime_data.append(regime_data)
 
 y1_min = min(df['v2x_polyarchy'].min() for df in all_regime_data)
 y1_max = max(df['v2x_polyarchy'].max() for df in all_regime_data)
-y2_min = min(df['KOFTrGIdf'].min() for df in all_regime_data)
-y2_max = max(df['KOFTrGIdf'].max() for df in all_regime_data)
+y2_min = min(df['KOFEcGI'].min() for df in all_regime_data)
+y2_max = max(df['KOFEcGI'].max() for df in all_regime_data)
 
 # Create individual regime plots for aggregate folder
 # Create global average plot first
 global_data = merged.groupby('year').agg({
     'v2x_polyarchy': 'mean',
-    'KOFTrGIdf': 'mean'
+    'KOFEcGI': 'mean'
 }).reset_index()
 
 fig, ax1 = plt.subplots(figsize=(12, 8))
@@ -325,7 +325,7 @@ line1 = ax1.plot(global_data['year'],
                  linewidth=2,
                  label='Democracy Score')
 line2 = ax2.plot(global_data['year'],
-                 global_data['KOFTrGIdf'],
+                 global_data['KOFEcGI'],
                  color='green',
                  linewidth=2,
                  label='Trade Openness')
@@ -360,7 +360,7 @@ for regime, regime_data in zip(sorted(merged['Regime_Type'].dropna().unique()),
                      linewidth=2,
                      label='Democracy Score')
     line2 = ax2.plot(regime_data['year'],
-                     regime_data['KOFTrGIdf'],
+                     regime_data['KOFEcGI'],
                      color='green',
                      linewidth=2,
                      label='Trade Openness')
@@ -400,7 +400,7 @@ for idx, (regime, regime_data) in enumerate(
                      linewidth=2,
                      label='Democracy Score')
     line2 = ax2.plot(regime_data['year'],
-                     regime_data['KOFTrGIdf'],
+                     regime_data['KOFEcGI'],
                      color='green',
                      linewidth=2,
                      label='Trade Openness')
@@ -445,7 +445,7 @@ for country_code in all_codes:
                      linewidth=2,
                      label='Democracy Score')
     line2 = ax2.plot(country_data['year'],
-                     country_data['KOFTrGIdf'],
+                     country_data['KOFEcGI'],
                      color='green',
                      linewidth=2,
                      label='Trade Openness')
@@ -453,7 +453,7 @@ for country_code in all_codes:
     for year in range(1970, 2021):
         year_data = country_data[country_data['year'] == year]
         if year_data.empty or year_data['v2x_polyarchy'].isnull().any(
-        ) or year_data['KOFTrGIdf'].isnull().any():
+        ) or year_data['KOFEcGI'].isnull().any():
             ax1.axvspan(year - 0.5, year + 0.5, color='red', alpha=0.2)
 
     # Add regime type indicator line
@@ -537,8 +537,8 @@ regime_colors = {
 }
 regimes = sorted(merged['Regime_Type'].dropna().unique())
 for regime in sorted(regimes):
-    regime_data = merged[merged['Regime_Type'] == regime].groupby('year')['KOFTrGIdf'].mean().reset_index()
-    plt.plot(regime_data['year'], regime_data['KOFTrGIdf'],
+    regime_data = merged[merged['Regime_Type'] == regime].groupby('year')['KOFEcGI'].mean().reset_index()
+    plt.plot(regime_data['year'], regime_data['KOFEcGI'],
             label=regime, color=regime_colors[regime], linewidth=2)
 
 plt.xlabel('Year')
